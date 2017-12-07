@@ -6,3 +6,35 @@
   background-image: url('../images/sea-bay-waterfront-beach.jpeg');
   height: 100vh;
 }
+
+.slip-enter {
+  opacity: 0;
+  transform: translate(-250px,0);
+  transform: translate3d(-250px,0,0);
+}
+
+.slip-enter.slip-enter-active {
+  opacity: 1;
+  transition: opacity 1s ease;
+  transform: translate(0,0);
+  transform: translate3d(0,0,0);
+  transition-property: transform, opacity;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+
+.slip-leave {
+  opacity: 1;
+}
+
+.slip-leave.slip-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.child-div {
+  position: absolute;
+  bottom: 0;
+  width:100%;
+  border: 1px solid red;
+}
