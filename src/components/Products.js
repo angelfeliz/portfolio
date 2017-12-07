@@ -1,5 +1,5 @@
 import React from 'react'
-import beach from '../images/sea-bay-waterfront-beach.jpeg'
+// import beach from '../images/sea-bay-waterfront-beach.jpeg'
 
 const Products = () => (
   <div className="section bg-blue">
@@ -9,7 +9,7 @@ const Products = () => (
         <div className="column">
           <h2>Project 1</h2>
           <figure className="image is-4by3">
-            <img src={beach} />
+            <img src="" />
           </figure>
         </div>
 
