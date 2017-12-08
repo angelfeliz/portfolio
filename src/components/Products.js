@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ReactCSSTransitionGroup from 'react-transition-group'
+
 import ProductDetail from './ProductDetail'
 // import beach from '../images/sea-bay-waterfront-beach.jpeg'
 
@@ -17,9 +17,8 @@ class Products extends Component {
   render () {
     return (
       <div className="section bg-blue">
-        <ReactCSSTransitionGroup transitionName="slip">
-          <ProductDetail />
-        </ReactCSSTransitionGroup>
+        {this.state.showProductDetail ? <ProductDetail /> : null}
+
         {/* <!--porta folio--> */}
         <section>
           <div className="columns">
@@ -42,7 +41,10 @@ class Products extends Component {
 
             <div className="column">
               <h2>Project 3</h2>
-              <figure className="image is-4by3">
+              <figure
+                className="image is-4by3"
+                onClick={() => this.productDetail('1')}
+              >
                 <img src="https://bulma.io/images/placeholders/256x256.png" />
               </figure>
             </div>
@@ -51,21 +53,30 @@ class Products extends Component {
           <div className="columns">
             <div className="column">
               <h2>Project 4</h2>
-              <figure className="image is-4by3">
+              <figure
+                className="image is-4by3"
+                onClick={() => this.productDetail('1')}
+              >
                 <img src="https://bulma.io/images/placeholders/256x256.png" />
               </figure>
             </div>
 
             <div className="column">
               <h2>Project 5</h2>
-              <figure className="image is-4by3">
+              <figure
+                className="image is-4by3"
+                onClick={() => this.productDetail('1')}
+              >
                 <img src="https://bulma.io/images/placeholders/256x256.png" />
               </figure>
             </div>
 
             <div className="column">
               <h2>Project 6</h2>
-              <figure className="image is-4by3">
+              <figure
+                className="image is-4by3"
+                onClick={() => this.productDetail('1')}
+              >
                 <img src="https://bulma.io/images/placeholders/256x256.png" />
               </figure>
             </div>
