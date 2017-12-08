@@ -14,17 +14,34 @@ class Products extends Component {
   productDetail = number => {
     this.setState({ ...this.state, showProductDetail: true })
   }
+
+  onClickCloseModal = () => {
+    this.setState({ ...this.state, showProductDetail: false })
+  }
+
   render () {
+    let showModal = this.state.showProductDetail ? 'show_modal' : 'hidden_modal'
     return (
       <div className="section bg-blue">
-        {this.state.showProductDetail ? <ProductDetail /> : null}
+        {this.state.showProductDetail ? (
+          <ProductDetail
+            show={showModal}
+            onClickCloseModal={this.onClickCloseModal}
+            url={'www.githgub.com'}
+            description={'react good project'}
+            nameProject={'Game of life'}
+          />
+        ) : null}
 
         {/* <!--porta folio--> */}
         <section>
           <div className="columns">
             <div className="column">
               <h2>Project 1</h2>
-              <figure className="image is-4by3">
+              <figure
+                className="image is-4by3"
+                onClick={() => this.productDetail('1')}
+              >
                 <img src="" />
               </figure>
             </div>
