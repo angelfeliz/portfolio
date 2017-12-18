@@ -1,22 +1,47 @@
 import React, { Component } from 'react'
-
 import ProductDetail from './ProductDetail'
+import { getAllRepo } from '../helpers/gitHubApi'
+import './Products/productDetail.css'
 // import beach from '../images/sea-bay-waterfront-beach.jpeg'
 
 class Products extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      showProductDetail: false
+      showProductDetail: false,
+      gitHub_repositories_own: [],
+      gitHub_repositories_forks: []
     }
   }
 
   productDetail = number => {
     this.setState({ ...this.state, showProductDetail: true })
   }
-
   onClickCloseModal = () => {
     this.setState({ ...this.state, showProductDetail: false })
+  }
+  componentDidMount () {
+    getAllRepo()
+      .then(res => {
+        let own = res.filter(item => {
+          console.log(item.fork)
+          if (item.fork === false) {
+            return item
+          }
+        })
+
+        let forks = res.filter(item => {
+          if (item.fork) {
+            return item
+          }
+        })
+        this.setState({
+          ...this.state,
+          gitHub_repositories_own: own,
+          gitHub_repositories_forks: forks
+        })
+      })
+      .catch(err => console.log(err))
   }
 
   render () {
@@ -33,70 +58,23 @@ class Products extends Component {
           />
         ) : null}
 
-        {/* <!--porta folio--> */}
+        {/* <!--portfolio--> */}
         <section>
-          <div className="columns">
-            <div className="column">
-              <h2>Project 1</h2>
-              <figure
-                className="image is-4by3"
-                onClick={() => this.productDetail('1')}
-              >
-                <img src="" />
-              </figure>
-            </div>
-
-            <div className="column">
-              <h2>Project 2</h2>
-              <figure
-                className="image is-4by3"
-                onClick={() => this.productDetail('1')}
-              >
-                <img src="https://bulma.io/images/placeholders/256x256.png" />
-              </figure>
-            </div>
-
-            <div className="column">
-              <h2>Project 3</h2>
-              <figure
-                className="image is-4by3"
-                onClick={() => this.productDetail('1')}
-              >
-                <img src="https://bulma.io/images/placeholders/256x256.png" />
-              </figure>
-            </div>
-          </div>
-
-          <div className="columns">
-            <div className="column">
-              <h2>Project 4</h2>
-              <figure
-                className="image is-4by3"
-                onClick={() => this.productDetail('1')}
-              >
-                <img src="https://bulma.io/images/placeholders/256x256.png" />
-              </figure>
-            </div>
-
-            <div className="column">
-              <h2>Project 5</h2>
-              <figure
-                className="image is-4by3"
-                onClick={() => this.productDetail('1')}
-              >
-                <img src="https://bulma.io/images/placeholders/256x256.png" />
-              </figure>
-            </div>
-
-            <div className="column">
-              <h2>Project 6</h2>
-              <figure
-                className="image is-4by3"
-                onClick={() => this.productDetail('1')}
-              >
-                <img src="https://bulma.io/images/placeholders/256x256.png" />
-              </figure>
-            </div>
+          <div className="flex_container-row">
+            {this.state.gitHub_repositories_own.map((item, index) => {
+              console.log(item)
+              return (
+                <div key={index} className="detail_box_product">
+                  <h2>{item.name}</h2>
+                  <figure
+                    className="img_box_product"
+                    onClick={() => this.productDetail('1')}
+                  >
+                    <img src="https://bulma.io/images/placeholders/256x256.png" />
+                  </figure>
+                </div>
+              )
+            })}
           </div>
         </section>
       </div>
