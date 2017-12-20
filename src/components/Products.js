@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ProductDetail from './ProductDetail'
 import { getAllRepo } from '../helpers/gitHubApi'
 import './Products/productDetail.css'
+
 // import beach from '../images/sea-bay-waterfront-beach.jpeg'
 
 class Products extends Component {
@@ -10,7 +11,12 @@ class Products extends Component {
     this.state = {
       showProductDetail: false,
       gitHub_repositories_own: [],
-      gitHub_repositories_forks: []
+      gitHub_repositories_forks: [],
+      tabs: {
+        tab1: true,
+        tab2: false,
+        selected: 'tab1'
+      }
     }
   }
 
@@ -20,11 +26,13 @@ class Products extends Component {
   onClickCloseModal = () => {
     this.setState({ ...this.state, showProductDetail: false })
   }
+  tabSelected = tabs => {
+    this.setState({ ...this.state, tabs: { ...this.state.tabs, ...tabs } })
+  }
   componentDidMount () {
     getAllRepo()
       .then(res => {
         let own = res.filter(item => {
-          console.log(item.fork)
           if (item.fork === false) {
             return item
           }
@@ -45,7 +53,36 @@ class Products extends Component {
   }
 
   render () {
+    let repoDependOnTabActive = {
+      tab1: this.state.gitHub_repositories_own.map((item, index) => {
+        return (
+          <div key={index} className="detail_box_product">
+            <h2>{item.name}</h2>
+            <figure
+              className="img_box_product"
+              onClick={() => this.productDetail('1')}
+            >
+              <img src="https://bulma.io/images/placeholders/256x256.png" />
+            </figure>
+          </div>
+        )
+      }),
+      tab2: this.state.gitHub_repositories_forks.map((item, index) => {
+        return (
+          <div key={index} className="detail_box_product">
+            <h2>{item.name}</h2>
+            <figure
+              className="img_box_product"
+              onClick={() => this.productDetail('1')}
+            >
+              <img src="https://bulma.io/images/placeholders/256x256.png" />
+            </figure>
+          </div>
+        )
+      })
+    }
     let showModal = this.state.showProductDetail ? 'show_modal' : 'hidden_modal'
+
     return (
       <div className="section bg-blue">
         {this.state.showProductDetail ? (
@@ -60,21 +97,28 @@ class Products extends Component {
 
         {/* <!--portfolio--> */}
         <section>
+          <span
+            className={`tab_botton ${
+              this.state.tabs.tab1 ? 'tab_botton_selected' : null
+            }`}
+            onClick={() =>
+              this.tabSelected({ tab1: true, tab2: false, selected: 'tab1' })
+            }
+          >
+            Private
+          </span>
+          <span
+            className={`tab_botton ${
+              this.state.tabs.tab2 ? 'tab_botton_selected' : null
+            }`}
+            onClick={() =>
+              this.tabSelected({ tab1: false, tab2: true, selected: 'tab2' })
+            }
+          >
+            Collaborated
+          </span>
           <div className="flex_container-row">
-            {this.state.gitHub_repositories_own.map((item, index) => {
-              console.log(item)
-              return (
-                <div key={index} className="detail_box_product">
-                  <h2>{item.name}</h2>
-                  <figure
-                    className="img_box_product"
-                    onClick={() => this.productDetail('1')}
-                  >
-                    <img src="https://bulma.io/images/placeholders/256x256.png" />
-                  </figure>
-                </div>
-              )
-            })}
+            {repoDependOnTabActive[this.state.tabs.selected]}
           </div>
         </section>
       </div>
