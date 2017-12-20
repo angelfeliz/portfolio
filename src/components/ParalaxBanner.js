@@ -2,8 +2,11 @@ import React from 'react'
 
 const ParalaxBanner = props => {
   return (
-    <div className="parralex_backgroud">
-      <h4>Coding...</h4>
+    <div className="paralex_backgroud">
+      <div className="message-container">
+        <h3>Code quote</h3>
+        <p className="message">Coding...</p>
+      </div>
     </div>
   )
 }

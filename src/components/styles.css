@@ -6,7 +6,36 @@
   background-image: url('../images/sunset.jpeg');
   background-size: cover;
   height: auto;
-
+}
+.paralex_backgroud {
+  background-image: url('../images/city-night-skyline.jpg');
+  height: 20vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.message-container {  
+  background-color: rgba(161, 35, 56, 0.2);
+  border: 1px solid rgba(161, 35, 56, 0.8);
+  width: 70%;
+  height: 10vh;
+  color: white;
+  padding-top: .5%;
+  padding-left: .5%;
+}
+.message-container h3 {
+  font-size: 1.5em;
+  padding-bottom: .2%;
+}
+.message-container p {
+  background-color: transparent;
+  padding-left: 1.1%;
 }
 .title, .subtitle {
   color:black;
