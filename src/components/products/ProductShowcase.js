@@ -1,4 +1,5 @@
 import React from 'react'
+// import { dirname } from 'path'
 
 const Productshowcase = props => {
   const layout = {
@@ -8,16 +9,21 @@ const Productshowcase = props => {
       ')',
     backgroundSize: 'contain',
     width: '100%',
-    minHeight: '200px'
+    minHeight: '200px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    textAlign: 'center',
+    fontSize: '1.2em'
   }
   return (
     <div key={props.index} className="detail_box_product">
       <figure
         className="img_box_product"
-        onClick={() => this.productDetail('1')}
+        onClick={() => props.productDetail('angelfeliz', props.name)}
       >
         <div style={layout}>
-          <h2 style={{ color: 'white' }}>{props.name}</h2>
+          <span style={{ color: 'white' }}>{props.name}</span>
         </div>
       </figure>
     </div>

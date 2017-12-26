@@ -14,6 +14,8 @@ class Products extends Component {
       showProductDetail: false,
       gitHub_repositories_own: [],
       gitHub_repositories_forks: [],
+      owner: '',
+      repo: '',
       tabs: {
         tab1: true,
         tab2: false,
@@ -22,8 +24,8 @@ class Products extends Component {
     }
   }
 
-  productDetail = number => {
-    this.setState({ ...this.state, showProductDetail: true })
+  productDetail = (owner, repo) => {
+    this.setState({ ...this.state, showProductDetail: true, owner, repo })
   }
   onClickCloseModal = () => {
     this.setState({ ...this.state, showProductDetail: false })
@@ -63,6 +65,7 @@ class Products extends Component {
             index={index}
             name={item.name}
             showcaseImg={showcaseImg()}
+            productDetail={this.productDetail}
           />
         )
       }),
@@ -89,6 +92,8 @@ class Products extends Component {
             show={showModal}
             onClickCloseModal={this.onClickCloseModal}
             url={'www.githgub.com'}
+            owner={this.state.owner}
+            repo={this.state.repo}
             description={'react good project'}
             nameProject={'Game of life'}
           />
