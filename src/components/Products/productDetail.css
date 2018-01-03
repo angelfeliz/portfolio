@@ -41,7 +41,9 @@
     background-color: yellow;
 }
 
-
+.product_full_container {
+    background-image: url('../../images/concrete-texture.png')
+}
 
 
 

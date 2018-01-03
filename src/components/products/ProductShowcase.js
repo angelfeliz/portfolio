@@ -20,7 +20,7 @@ const Productshowcase = props => {
     <div key={props.index} className="detail_box_product">
       <figure
         className="img_box_product"
-        onClick={() => props.productDetail('angelfeliz', props.name)}
+        onClick={() => props.onClickProduct(props.name)}
       >
         <div style={layout}>
           <span style={{ color: 'white' }}>{props.name}</span>

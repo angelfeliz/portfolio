@@ -30,6 +30,9 @@ class Products extends Component {
   onClickCloseModal = () => {
     this.setState({ ...this.state, showProductDetail: false })
   }
+  goToGitHubLink = repo => {
+    window.open(`https://github.com/angelfeliz/${repo}`)
+  }
   tabSelected = tabs => {
     this.setState({ ...this.state, tabs: { ...this.state.tabs, ...tabs } })
   }
@@ -65,28 +68,26 @@ class Products extends Component {
             index={index}
             name={item.name}
             showcaseImg={showcaseImg()}
-            productDetail={this.productDetail}
+            onClickProduct={this.goToGitHubLink}
           />
         )
       }),
       tab2: this.state.gitHub_repositories_forks.map((item, index) => {
         return (
-          <div key={index} className="detail_box_product">
-            <h2>{item.name}</h2>
-            <figure
-              className="img_box_product"
-              onClick={() => this.productDetail('1')}
-            >
-              <img src="https://bulma.io/images/placeholders/256x256.png" />
-            </figure>
-          </div>
+          <ProductShowcase
+            key={index}
+            index={index}
+            name={item.name}
+            showcaseImg={showcaseImg()}
+            onClickProduct={this.goToGitHubLink}
+          />
         )
       })
     }
     let showModal = this.state.showProductDetail ? 'show_modal' : 'hidden_modal'
 
     return (
-      <div className="section bg-blue">
+      <div className="section bg-blue product_full_container">
         {this.state.showProductDetail ? (
           <ProductDetail
             show={showModal}
@@ -94,8 +95,6 @@ class Products extends Component {
             url={'www.githgub.com'}
             owner={this.state.owner}
             repo={this.state.repo}
-            description={'react good project'}
-            nameProject={'Game of life'}
           />
         ) : null}
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
 import { getReadme } from '../../helpers/gitHubApi'
+import showdown from 'showdown'
 
 class ProductDetail extends Component {
   constructor (props) {
@@ -8,6 +9,10 @@ class ProductDetail extends Component {
     this.state = {
       readme: ''
     }
+  }
+  markerToText = text => {
+    let converter = new showdown.Converter()
+    return converter.makeHtml(text)
   }
   componentDidMount () {
     getReadme(this.props.owner, this.props.repo).then(data => {
@@ -20,7 +25,7 @@ class ProductDetail extends Component {
         <div className="columns board_detail">
           <div className="column is-two-fifths left-side_detail">
             <img src="https://bulma.io/images/placeholders/256x256.png" />
-            <h4>{this.props.nameProject}</h4>
+            <h4>{this.props.repo}</h4>
           </div>
           <div className="column right-side_detail">
             <div className="is-pulled-right">
@@ -32,11 +37,13 @@ class ProductDetail extends Component {
               >
                 close
               </button>
-            </div>
-            CHeck out what good bro
-            <div>
               <i className="has-text-left">{this.props.url}</i>
-              <p className="has-text-justified">this.state.readme</p>
+              <span
+                className="has-text-justified"
+                dangerouslySetInnerHTML={{
+                  __html: this.markerToText(this.state.readme)
+                }}
+              />
               <div className="child-div"> </div>
             </div>
           </div>

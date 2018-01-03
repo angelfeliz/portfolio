@@ -23,7 +23,6 @@ class Presentation extends Component {
               <div className="column is-half is-offset-one-quarter">
                 <h1 className="title">Angel Rodriguez</h1>
                 <h2 className="subtitle">Developer</h2>
-                <hr />
                 <p>{valueString.about}</p>
               </div>
             </div>

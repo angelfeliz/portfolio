@@ -20,7 +20,10 @@ export const valueString = {
         also an enthusiastic photography and always trying to have a book to be reading.`,
   team: `Set up a good comunication with each persone in my team, to have a very good straight
            forward comunication, have the same idea and well behavier of the project or the requisition we are attending.`,
-  code: `This is one of the principal feacture all developers needs to have sharp. A have a few project in back-end lenguage c# and JS, also front-end with JS vanilla and ReactJS.`
+  code:
+    'This is one of the principal feacture all developers needs to have sharp.' +
+    'A have a few project in JS using as back-end and on the front-end with' +
+    'JS vanilla and ReactJS.'
 }
 
 export const showcaseImg = () => {
