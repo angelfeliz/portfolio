@@ -87,7 +87,7 @@ class Products extends Component {
     let showModal = this.state.showProductDetail ? 'show_modal' : 'hidden_modal'
 
     return (
-      <div className="section bg-blue product_full_container">
+      <div className="bg-blue product_full_container">
         {this.state.showProductDetail ? (
           <ProductDetail
             show={showModal}

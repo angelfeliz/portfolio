@@ -6,19 +6,7 @@
   background-image: url('../images/concrete-texture.png');  
   height: auto;
 }
-.paralex_backgroud {
-  background-image: url('../images/city-night-skyline.jpg');
-  height: 20vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
+
 .message-container {  
   background-color: rgba(161, 35, 56, 0.7);
   border: 1px solid rgba(161, 35, 56, 0.8);
@@ -153,4 +141,27 @@
   min-height: 40%;
   padding: 3.1% 3.1% 3.1% 3.1%;
   text-align: justify;
+}
+
+.contact {
+  background-color: black;
+  color:white;
+  height: 40vh;
+}
+.contact-flex-row {  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+
+.contact-flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+  width:19%; 
+}
+
+.contact-flex-col div i {
+  margin-right:0.9%;
 }

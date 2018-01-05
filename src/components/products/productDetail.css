@@ -1,0 +1,115 @@
+.flex_container-row {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.detail_box_product {
+    width: 25%;
+    cursor: pointer; 
+    margin: .9%;    
+}
+
+.img_box_product { 
+    min-height: 50%;  
+    cursor: pointer;  
+}
+
+.img_box_product img {
+    border: solid 1px black;
+    border-radius: 1%;
+}
+
+.tab_botton {
+    border: 1px solid black;
+    border-radius: .2em;
+    padding: .2% .5% .2% .5%;
+    margin: 1%;
+    background-color: transparent;
+    cursor: pointer;    
+}
+
+.tab_botton_selected {
+    background-color:rgba(161, 35, 56, 0.6);
+    color:white
+}
+
+.parralex_backgroud {
+    background-color: yellow;
+}
+
+.product_full_container {
+    background-image: url('../../images/concrete-texture.png');
+    padding-top: 1.5%;
+}
+
+.paralex_backgroud {
+    background-image: url('../../images/city-night-skyline.jpg');    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+@media (min-width: 100px) and (max-width: 575px) {
+    .paralex_backgroud {       
+        height: 25vh;       
+      }
+      .detail_box_product {
+        width: 100%;     
+    }
+
+    .flex_container-row {        
+        height: 50vh;
+        overflow-y: auto;
+    }
+}
+
+@media (min-width: 576px) {
+    .paralex_backgroud {       
+        height: 25vh;       
+      }
+      .detail_box_product {
+        width: 100%;     
+    }
+}
+
+@media (min-width: 768px) {
+    .paralex_backgroud {       
+        height: 25vh;       
+      }
+      .detail_box_product {
+        width: 40%;     
+    }
+ }
+
+ @media (min-width: 992px) { 
+    .paralex_backgroud {       
+        height: 22vh;
+      }
+      .detail_box_product {
+        width: 25%;     
+    }
+  }
+
+ @media (min-width: 1200px) { 
+    .paralex_backgroud {        
+        height: 20vh; 
+      }
+
+      .detail_box_product {
+        width: 25%;     
+    }
+
+  }
+
