@@ -4,6 +4,13 @@ const Contact = () => {
   return (
     <section className="contact">
       <div className="contact-flex-row">
+        <div>
+          <p>CHeck out!!</p>
+        </div>
+        <div className="contact-paragraph">
+          <p>Hope to hear from you! Best regards.</p>
+        </div>
+
         <div className="contact-flex-col">
           <div>
             <i className="fa fa-envelope-o" aria-hidden="true" />
