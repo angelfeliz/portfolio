@@ -1,28 +1,104 @@
-.App {
-  text-align: center;
+.navigation {
+  list-style: none;
+  margin: 0; 
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: black;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.navigation a:hover {
+  background: red;/*darken(deepskyblue, 2%);*/
 }
 
-.App-title {
-  font-size: 1.5em;
+.hamberguericon {
+  display: none;
 }
 
-.App-intro {
-  font-size: large;
+.hamberguericon {  
+  padding: 2% 0% 1.5% 2%;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@media all and (max-width: 800px) {
+  .me {
+    width: 50%;
+    height: 50%;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .bar_nav {
+    background: transparent;
+  }
+
+  .hamberguericon {
+    display: inline;
+    
+  }
+
+  .navigation_show {
+    /*justify-content: space-around;*/
+    flex-flow: column wrap;
+    padding: 0;
+    display: inline;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    /*border-top: 1px solid rgba(255,255,255,0.3);*/
+    /*border-bottom: 1px solid rgba(0,0,0,0.1);*/
+  }
+
+  .navigation a:hover {
+    background: transparent;/*darken(deepskyblue, 2%);*/
+  }
+}
+
+@media all and (max-width: 600px) {
+   .navigation {
+    display: none;
+  }
+  
+  .hamberguericon {  
+    display: inline;
+  }
+  .bar_nav {
+    background: transparent;    
+  } 
+  
+  .navigation_show {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+    display: inline;
+  }
+
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  .navigation a :hover {
+    background: red;
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
 }

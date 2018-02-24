@@ -21,6 +21,7 @@ const Contact = () => {
         <div className="contact-flex-col">
           <div>
             <i className="fa fa-envelope-o" aria-hidden="true" />
+            <span />
             <span>erodriguezfeliz@gmail.com</span>
           </div>
           <div>

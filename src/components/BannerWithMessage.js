@@ -7,9 +7,10 @@ class BannerWithMessage extends Component {
     this.state = {
       showBody: false
     }
+    this.onClickShowBody = this.onClickShowBody.bind(this)
   }
 
-  onClickShowBody = () => {
+  onClickShowBody () {
     this.setState({ ...this.state, showBody: !this.state.showBody })
   }
 

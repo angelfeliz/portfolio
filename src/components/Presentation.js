@@ -13,7 +13,7 @@ class Presentation extends Component {
 
   render () {
     return (
-      <div className="section bg-image-section-1">
+      <div className="bg-image-section-1">
         {
           // backgroungImage is here
         }
@@ -22,8 +22,6 @@ class Presentation extends Component {
             <div className="columns">
               <div className="column is-two-fifths" />
               <div className="column is-half">
-                <h1 className="title">Angel Rodriguez</h1>
-                <h2 className="subtitle">Developer</h2>
                 <p>{valueString.about}</p>
                 <div className="section_of_question">
                   <div className="banners is-pulled-right">

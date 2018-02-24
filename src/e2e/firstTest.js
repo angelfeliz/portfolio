@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import Presentation from '../components/Presentation'
 import renderer from 'react-test-renderer'
 
@@ -7,3 +7,4 @@ it('look first test', () => {
   let tree = component.toJSON()
   expect(tree).toMatchSnapshot()
 })
+*/

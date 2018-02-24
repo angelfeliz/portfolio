@@ -3,8 +3,12 @@
 }
 
 .bg-image-section-1 {
-  background-image: url('../images/concrete-texture.png');  
+  /*background-image: url('../images/concrete-texture.png');  */
+  background-image: url('../images/sky.jpeg');
   height: auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
 }
 
 .message-container {  
@@ -28,18 +32,35 @@
 }
 .title, .subtitle {
   color:black;
+  font-size: 400%;
+}
+
+.me {
+  width: 100%;
+  height: 90%;
 }
 .speech {
   padding-bottom: 1%;
 }
 
+.inner_section-00 {
+  padding-top:1%;
+  padding-bottom:1%;  
+  background-color: rgba(213,106,90,0.7);/*rgba(161, 35, 56, 0.8);*/
+  color:black;
+  max-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .inner_section-01 {
   padding-top:1%;
-  padding-bottom:1%;
-  background-color: rgba(161, 35, 56, 0.8);
+  padding-bottom:1%;  
+  background-color: rgba(213,106,90,0.6);/*rgba(161, 35, 56, 0.8);*/
   color:black;
   max-height: 90vh;
-  width: 71.5%;
+  width: 100%;
   overflow: auto;
   margin: 0 auto;
 }
@@ -177,4 +198,16 @@
 
 .contact-paragraph > p {
   margin-bottom: 2%;
+}
+
+@media all and (max-width: 800px) {
+  .me {
+  
+  }
+}
+
+@media all and (max-width: 600px) {
+  .me {
+   display: none;
+  }
 }
