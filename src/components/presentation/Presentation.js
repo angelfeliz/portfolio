@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { valueString } from '../helpers/valueString'
-import BannerWithMessage from './BannerWithMessage'
+import { valueString } from '../../helpers/valueString'
+import BannerWithMessage from '../bannerWithMessage/BannerWithMessage'
+import './presentation.css'
 
 class Presentation extends Component {
   constructor (props) {
@@ -13,7 +14,7 @@ class Presentation extends Component {
 
   render () {
     return (
-      <div className="bg-image-section-1">
+      <div className="bg-image-section-2">
         {
           // backgroungImage is here
         }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Introduction from './components/introduction/Introduction'
-import Presentation from './components/Presentation'
+import Presentation from './components/presentation/Presentation'
 import Products from './components/products/Products'
 import ParallaxBanner from './components/ParalaxBanner'
 import Contact from './components/Contact'
@@ -33,7 +33,7 @@ class App extends Component {
               className="hamberguericon"
               onClick={() => this.onClickShowMenu()}
             >
-              <i className="fa fa-bars fa-2x" />
+              <i className="fa fa-bars fa-2x icon_hamber_icon_color" />
             </span>
           </div>
           <ul
