@@ -38,34 +38,18 @@
     color:white
 }
 
-.parralex_backgroud {
-    background-color: yellow;
-}
+
 
 .product_full_container {
     background-image: url('../../images/concrete-texture.png');
-    padding-top: 1.5%;
+    padding-top: 3%;
 }
 
-.paralex_backgroud {
-    background-image: url('../../images/city-night-skyline.jpg');    
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
+
 
 
 @media (min-width: 100px) and (max-width: 575px) {
-    .paralex_backgroud {       
-        height: 25vh;       
-      }
-      .detail_box_product {
+    .detail_box_product {
         width: 100%;     
     }
 
@@ -76,38 +60,25 @@
 }
 
 @media (min-width: 576px) {
-    .paralex_backgroud {       
-        height: 25vh;       
-      }
-      .detail_box_product {
+    .detail_box_product {
         width: 100%;     
     }
 }
 
 @media (min-width: 768px) {
-    .paralex_backgroud {       
-        height: 25vh;       
-      }
-      .detail_box_product {
+   .detail_box_product {
         width: 40%;     
     }
  }
 
  @media (min-width: 992px) { 
-    .paralex_backgroud {       
-        height: 22vh;
-      }
-      .detail_box_product {
+    .detail_box_product {
         width: 25%;     
     }
   }
 
  @media (min-width: 1200px) { 
-    .paralex_backgroud {        
-        height: 20vh; 
-      }
-
-      .detail_box_product {
+    .detail_box_product {
         width: 25%;     
     }
 

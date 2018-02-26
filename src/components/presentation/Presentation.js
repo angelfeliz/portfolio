@@ -18,28 +18,22 @@ class Presentation extends Component {
         {
           // backgroungImage is here
         }
-        <section className="hero inner_section-01">
-          <div className="hero-body speech">
-            <div className="columns">
-              <div className="column is-two-fifths" />
-              <div className="column is-half">
-                <p>{valueString.about}</p>
-                <div className="section_of_question">
-                  <div className="banners is-pulled-right">
-                    <BannerWithMessage title={'Why work with me?'}>
-                      {valueString.work_with_me}
-                    </BannerWithMessage>
+        <section className="inner_section-01">
+          <div>
+            <p>{valueString.about}</p>
 
-                    <BannerWithMessage title={'Work with team'}>
-                      {valueString.team}
-                    </BannerWithMessage>
+            <div className="banners">
+              <BannerWithMessage title={'Why work with me?'}>
+                {valueString.work_with_me}
+              </BannerWithMessage>
 
-                    <BannerWithMessage title={'About coding'}>
-                      {valueString.code}
-                    </BannerWithMessage>
-                  </div>
-                </div>
-              </div>
+              <BannerWithMessage title={'Work with team'}>
+                {valueString.team}
+              </BannerWithMessage>
+
+              <BannerWithMessage title={'About coding'}>
+                {valueString.code}
+              </BannerWithMessage>
             </div>
           </div>
         </section>

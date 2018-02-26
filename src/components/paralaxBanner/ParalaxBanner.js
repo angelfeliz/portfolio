@@ -1,4 +1,5 @@
 import React from 'react'
+import './paralaxBanner.css'
 
 const ParalaxBanner = props => {
   return (
