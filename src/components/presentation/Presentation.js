@@ -14,27 +14,23 @@ class Presentation extends Component {
 
   render () {
     return (
-      <div className="bg-image-section-2">
+      <div id="about" className="bg-image-section-2">
         {
           // backgroungImage is here
         }
         <section className="inner_section-01">
-          <div>
-            <p>{valueString.about}</p>
+          <div className="banners">
+            <BannerWithMessage title={'Why work with me?'}>
+              {valueString.work_with_me}
+            </BannerWithMessage>
 
-            <div className="banners">
-              <BannerWithMessage title={'Why work with me?'}>
-                {valueString.work_with_me}
-              </BannerWithMessage>
+            <BannerWithMessage title={'Work with team'}>
+              {valueString.team}
+            </BannerWithMessage>
 
-              <BannerWithMessage title={'Work with team'}>
-                {valueString.team}
-              </BannerWithMessage>
-
-              <BannerWithMessage title={'About coding'}>
-                {valueString.code}
-              </BannerWithMessage>
-            </div>
+            <BannerWithMessage title={'About coding'}>
+              {valueString.code}
+            </BannerWithMessage>
           </div>
         </section>
       </div>

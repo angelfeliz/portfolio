@@ -1,12 +1,8 @@
 import React from 'react'
-// import { dirname } from 'path'
 
 const Productshowcase = props => {
   const layout = {
-    backgroundImage:
-      'linear-gradient(rgba(19, 244, 255, 0.45), rgb(76, 48, 46)), url(' +
-      props.showcaseImg +
-      ')',
+    backgroundColor: props.palletColors,
     backgroundSize: 'contain',
     width: '100%',
     minHeight: '200px',

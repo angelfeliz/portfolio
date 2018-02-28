@@ -3,7 +3,7 @@ import Introduction from './components/introduction/Introduction'
 import Presentation from './components/presentation/Presentation'
 import Products from './components/products/Products'
 import ParallaxBanner from './components/paralaxBanner/ParalaxBanner'
-import Contact from './components/Contact'
+import Contact from './components/contact/Contact'
 // import logo from './logo.svg'
 import './App.css'
 // import 'bulma/css/bulma.css'
@@ -42,7 +42,7 @@ class App extends Component {
             }`}
           >
             <li>
-              <a href="#">About</a>
+              <a href="#about">About</a>
             </li>
             <li>
               <a href="#">Projects</a>

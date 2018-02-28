@@ -1,6 +1,6 @@
 .bg-image-section-2 {
-    background-color: rgb(237, 229, 219);
-    height: 100vh;
+    background-color: #f6ca90;/*rgb(237, 229, 219);*/
+    height: auto;
     width: 100%;
 }
 
@@ -10,10 +10,13 @@
     padding-left: 10%;
     padding-right: 10%;    
     color:black;
-    max-height: 100vh;
-    height: 100vh;
-    
-    overflow: auto;
+   /* max-height: 100vh;*/
+    height: auto;    
+    /*overflow: auto;*/
     margin: 0 auto;
+  }
+
+  .shortAbout {
+      line-height: 150%;
   }
   

@@ -110,36 +110,5 @@ html {
   padding-right: 2.5%
 }
 
-.contact {
-  background-color: black;
-  color:white;
-  height: 40vh;
-}
-.contact-flex-row {  
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: inherit;
-  
-}
 
-.contact-flex-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;  
-  align-content: center;  
-  flex-basis: 25%;
-}
-
-.contact-flex-col div i {
-  margin-right:0.9%;
-}
-.contact-paragraph {
-  width:35%;
-}
-
-.contact-paragraph > p {
-  margin-bottom: 2%;
-}
 

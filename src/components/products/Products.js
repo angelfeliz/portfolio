@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ProductDetail from './ProductDetail'
-import { getAllRepo } from '../../helpers/gitHubApi'
-import { showcaseImg } from '../../helpers/valueString'
+import { getAllRepo, listOfRepoToShow } from '../../helpers/gitHubApi'
+import { palletColors } from '../../helpers/valueString'
 import ProductShowcase from './ProductShowcase'
 import './productDetail.css'
 
@@ -40,13 +40,13 @@ class Products extends Component {
     getAllRepo()
       .then(res => {
         let own = res.filter(item => {
-          if (item.fork === false) {
+          if (item.fork === false && listOfRepoToShow[item.name] === true) {
             return item
           }
         })
 
         let forks = res.filter(item => {
-          if (item.fork) {
+          if (item.fork && listOfRepoToShow[item.name]) {
             return item
           }
         })
@@ -67,7 +67,7 @@ class Products extends Component {
             key={index}
             index={index}
             name={item.name}
-            showcaseImg={showcaseImg()}
+            palletColors={palletColors()}
             onClickProduct={this.goToGitHubLink}
           />
         )
@@ -78,7 +78,7 @@ class Products extends Component {
             key={index}
             index={index}
             name={item.name}
-            showcaseImg={showcaseImg()}
+            palletColors={palletColors()}
             onClickProduct={this.goToGitHubLink}
           />
         )

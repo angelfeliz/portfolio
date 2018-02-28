@@ -4,9 +4,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    /*height: 100vh;*/
+    height: auto;
 }
-
 
 .detail_box_product {
     width: 25%;
@@ -27,26 +26,21 @@
 .tab_botton {
     border: 1px solid black;
     border-radius: .2em;
-    padding: .2% .5% .2% .5%;
+    padding: 1.2% .8% 1.2% .8%;
     margin: 1%;
     background-color: transparent;
     cursor: pointer;    
 }
 
 .tab_botton_selected {
-    background-color:rgba(161, 35, 56, 0.6);
+    background-color:rgba(213, 106, 90, 1);
     color:white
 }
-
-
 
 .product_full_container {
     background-image: url('../../images/concrete-texture.png');
     padding-top: 3%;
 }
-
-
-
 
 @media (min-width: 100px) and (max-width: 575px) {
     .detail_box_product {
@@ -54,8 +48,7 @@
     }
 
     .flex_container-row {        
-        height: 50vh;
-        overflow-y: auto;
+    
     }
 }
 
@@ -81,6 +74,5 @@
     .detail_box_product {
         width: 25%;     
     }
-
   }
 

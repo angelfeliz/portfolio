@@ -18,14 +18,13 @@ class BannerWithMessage extends Component {
   render () {
     return (
       <div className="banner">
-        <div className="head-banner" onClick={() => this.onClickShowBody()}>
+        <div className="head-banner">
           <span className="title-banner">{this.props.title}</span>
         </div>
-        {this.state.showBody ? (
-          <div className="body-banner">
-            <p>{this.props.children}</p>
-          </div>
-        ) : null}
+
+        <div className="body-banner">
+          <p>{this.props.children}</p>
+        </div>
       </div>
     )
   }
