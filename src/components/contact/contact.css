@@ -18,7 +18,7 @@
     justify-content: space-around;  
     align-content: center;    
     flex-grow: 1;
-    width: 100%;
+    width: 70%;
   }
   
   .contact-flex-col div i {
@@ -28,7 +28,8 @@
   .contact-paragraph {
     flex-grow: 1;
     text-align: right;
-    margin-right: 1%;
+    margin-right: 3%;
+    flex-basis: 35%;
   }
   
   .contact-paragraph > p {
@@ -38,6 +39,7 @@
   .container_image_footer {   
      padding: 0 2% 0 2%;
     flex-grow: 1;
+    flex-basis: 35%;
   }
 
   @media all and (max-width: 800px) {

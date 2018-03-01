@@ -35,25 +35,28 @@
     align-self: center;
     /*background-color: rgba(49, 61, 84, 0.6);*/
     padding-left:5%;
+    padding-right: 5%
   }
 
   .title {
     color:black;
-    font-size: calc(25px + (95 - 16) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(20px + (95 - 20) * ((100vw - 300px) / (1600 - 300)));
     padding: 0;
     margin:0;
   }
   .subtitle {
-    font-size: calc(20px + (70 - 16) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(16px + (70 - 16) * ((100vw - 300px) / (1600 - 300)));
     padding: 0;
     margin:0;
     font-weight: 100;
   }
   
   .shortSummary {
-    font-size: calc(14px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
-    line-height: 130%;  
+    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
+    line-height: 150%;  
     font-weight: 100;  
+    text-align: justify;
+
   }
 
 

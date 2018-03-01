@@ -10,7 +10,8 @@ const Productshowcase = props => {
     flexDirection: 'column',
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: '1.2em'
+    fontSize: 'calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)))',
+    fontWeight: '100'
   }
   return (
     <div key={props.index} className="detail_box_product">
