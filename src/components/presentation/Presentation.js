@@ -20,15 +20,27 @@ class Presentation extends Component {
         }
         <section className="inner_section-01">
           <div className="banners">
-            <BannerWithMessage title={'Why work with me?'}>
+            <BannerWithMessage
+              title={'Why work with me?'}
+              palletColor={'#cacfd5'}
+              colorRGB={'rgba(233,168,65,1)'}
+            >
               {valueString.work_with_me}
             </BannerWithMessage>
 
-            <BannerWithMessage title={'Work with team'}>
+            <BannerWithMessage
+              title={'Team work'}
+              palletColor={'#cacfd5'}
+              colorRGB={'rgba(49,61,84,1)'}
+            >
               {valueString.team}
             </BannerWithMessage>
 
-            <BannerWithMessage title={'About coding'}>
+            <BannerWithMessage
+              title={'About coding'}
+              palletColor={'#cacfd5'}
+              colorRGB={'rgba(24,95,76,1)'}
+            >
               {valueString.code}
             </BannerWithMessage>
           </div>

@@ -3,7 +3,7 @@
 .bg-image-section-1 {
     /*background-image: url('../images/concrete-texture.png');  */
     /*background-image: url('../../images/sky.jpeg');*/
-    background-color: #d56a5a;
+    background-color: #cacfd5;/*#d56a5a;*/
     height: auto;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -34,21 +34,31 @@
   .naming {
     align-self: center;
     /*background-color: rgba(49, 61, 84, 0.6);*/
-    padding-left:5%;
-    padding-right: 5%
+    
+    
+    
   }
 
   .title {
-    color:black;
+    color:#cacfd5;
     font-size: calc(20px + (95 - 20) * ((100vw - 300px) / (1600 - 300)));
     padding: 0;
+    padding-top: 2%;
+    padding-left:3.1%;
     margin:0;
+    background-color: rgba(81, 24, 16, 1);
+    border-bottom: 1px solid rgba(81, 24, 16, 1);
   }
   .subtitle {
     font-size: calc(16px + (70 - 16) * ((100vw - 300px) / (1600 - 300)));
     padding: 0;
+    padding-left:3.1%;
+    padding-bottom: 2%;
     margin:0;
     font-weight: 100;
+    background-color: rgba(81, 24, 16, 1);
+    border-top: 1px solid rgba(81, 24, 16, 1);
+    color:#cacfd5;
   }
   
   .shortSummary {
@@ -56,7 +66,8 @@
     line-height: 150%;  
     font-weight: 100;  
     text-align: justify;
-
+    padding-right: 5%;
+    padding-left:5%;
   }
 
 

@@ -1,3 +1,9 @@
+@media all and (max-width: 600px) {
+  p {
+      font-weight: 400;
+  }
+}
+
 html {
   overflow-x: hidden;
 }
@@ -10,11 +16,6 @@ p {
   font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 100;
 }
-
-
-
-
-
 
 .speech {
   padding-bottom: 1%;
@@ -113,6 +114,3 @@ p {
   padding-top: 2%;
   padding-right: 2.5%
 }
-
-
-

@@ -6,7 +6,7 @@ const Contact = () => {
     <section className="contact">
       <div className="contact-flex-row">
         <div className="container_image_footer">
-          <p>Think for passing by my portfolio.</p>
+          <p>Thank you for checking out my portfolio.</p>
         </div>
         <div className="contact-flex-col">
           <div>

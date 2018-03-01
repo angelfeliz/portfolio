@@ -16,10 +16,21 @@ class BannerWithMessage extends Component {
   }
 
   render () {
+    let styles = {
+      minHeight: '12%',
+      padding: '1% 1% .5% 0',
+      width: '100%',
+      backgroundColor: `${this.props.colorRGB}`,
+      borderBottom: `4px solid ${this.props.palletColor}`,
+      color: 'white',
+      fontWeight: '200'
+    }
+    console.log(styles)
+    console.log(this.props.palletColor)
     return (
       <div className="banner">
-        <div className="head-banner">
-          <span className="title-banner">{this.props.title}</span>
+        <div style={styles}>
+          <span className="title-banner">{this.props.title.toUpperCase()}</span>
         </div>
 
         <div className="body-banner">

@@ -1,5 +1,5 @@
 .bg-image-section-2 {
-    background-color: #f6ca90;/*rgb(237, 229, 219);*/
+    background-color: white;/*#e9A841;/*#f6ca90;/*rgb(237, 229, 219);*/
     height: auto;
     width: 100%;
 }
@@ -7,13 +7,13 @@
 .inner_section-01 {
     padding-top:2%;
     padding-bottom:1%;  
-    padding-left: 10%;
+    /*padding-left: 10%;*/
     padding-right: 10%;    
     color:black;
    /* max-height: 100vh;*/
     height: auto;    
     /*overflow: auto;*/
-    margin: 0 auto;
+    /*margin: 0 auto;*/
   }
 
   .shortAbout {
