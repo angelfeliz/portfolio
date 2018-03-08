@@ -7,9 +7,6 @@ class Introduction extends Component {
   render () {
     return (
       <div className="bg-image-section-1">
-        {
-          // backgroungImage is here
-        }
         <section className="container_screen">
           <div className="image_front_picture">
             <img className="me" src={require('../../images/me.jpg')} />

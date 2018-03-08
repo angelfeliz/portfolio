@@ -1,17 +1,17 @@
 export const valueString = {
-  work_with_me: `Proficiency proven working on team, having proved a multicultural social skill working at international company and member active of the chingu developer community. Compromised with the client to deliver the project as they expect. Projects sometimes can have a adversity, having a good communication with the team or the client is so important as writing the code which will make the project stand up,  the wellness for a project or a one time job depends on the good communication. `,
-  about: `I started learning software developer with OOP, I had my first job working with C# and .NET at the pass of couple of years and while I was improving my in the OOP world with the C# language, one day a friend show me the real face of javaScript and Functional Programming since that day I started getting more and more involved in the JavaScript world and his ecosystem and also FP. At the time I realize that I felt lousy in the CS world yes! that is right I became a JS programmer.
+  work_with_me: `Proven competency working in a team, prove multicultural social skills working in an international company. Active member of the Chingu Developer community, mindful of the deadlines and project guidelines.`,
+  about: `I start my developer carrier with the OOP paradigm,  my first job were working with C# as the years pass and I were always improving my learning in the .NET world. One day my good friend show the other face of javascript I did not know after that I start digging more in the JS world and learning about Function Programing. I felt attache with FP and JS I decided to keep my developer live as a JS programmer.
 
   “Ever stop learning whatever you like”`,
-  team: `The team integration is one of the As for wellness of the project or work place, it depends on  not only of how we handle the code between each one, also of a high soft skill to handle a good coworker relationship. Following  basic principle of soft skills communication is one of my abilities to improve my communication on every day of my live. As part of a team I always seek for wellness of the communication and the participation.`,
-  code: `I have 4 years of coding experiences, to be honest I have not get tired of learning and improving my coding skills,very eager of learning new technique of how to solve dev problem always on top on the edge of the new librarys or framework, reading dev books, medium post, catching up with the tweet about the coding world, listen to podcast, and watching a few events.`
+  team: `Team spirit is a key for the success of a project or within the work space. Basic principles of soft skills, communication is one of my abilities to improve day-to-day relationships. As a member of a team, I always look for good interaction and integration.`,
+  code: `I have 4 years of coding experiences. Learning and improving my coding skills are challenges where I do my best to overcome the challenges. Software community is growing fast that is why I’m always on top of  new libraries or frameworks, reading books and post, catching up with tweets, listening to podcast, and watching a few events.`
 }
 
 export function palletColors () {
   const colors = {
     1: '#e9a841', // mostaza
     2: '#511810', // maron rojiso
-    3: '#1c534c', // verde lindo
+    3: '#1c534c', // verde suave
     4: '#313d54' // azul oscuro
   }
 
