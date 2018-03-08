@@ -1,6 +1,10 @@
 export const valueString = {
   work_with_me: `Mindful of the deadlines and project guidelines. Proven competency working in a team, prove multicultural social skills working in an international company. Active member of the Chingu Developer community `,
-  about: `I start my developer carrier with the OOP paradigm,  my first job were working with C# as the years pass and I were always improving my learning in the .NET world. One day my good friend show the other face of javascript I did not know after that I start digging more in the JS world and learning about Function Programing. I felt attache with FP and JS I decided to keep my developer live as a JS programmer.
+  about: `I start my developer carrier with the OOP paradigm,  my first job were working with C# 
+         as the years pass and I were always improving my learning in the .NET world. One day my 
+         good friend show me the other face of javascript. After that I started digging 
+         more in the JS world and learning about Functional Programing. I felt attached with FP and 
+         JS I decided to keep my developer life as a JS programmer.
  
   “Ever stop learning whatever you like”`,
   team: `Team spirit is a key for the success of a project or within the work space. Basic principles of soft skills, communication is one of my abilities to improve day-to-day relationships. As a member of a team, I always look for good interaction and integration.`,
