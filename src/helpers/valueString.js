@@ -2,8 +2,8 @@ export const valueString = {
   work_with_me: `Mindful of the deadlines and project guidelines. Proven competency working in a team, 
                  prove multicultural social skills working in an international company. Active member of 
                  the Chingu Developer community `,
-  about: `I start my developer career with the OOP paradigm,  my first job were working with C# 
-         as the years pass and I were always improving my learning in the .NET world. One day a
+  about: `I start my developer career with the OOP paradigm,  my first job was working with C# 
+         as the years pass and I was always improving my learning in the .NET world. One day a
          good friend of mine showed me the other face of javascript that I did not know. After that I start digging 
          more in the JS world and learning about Functional Programming. I felt attached with FP and 
          JS I decided to pursue JS programming.
