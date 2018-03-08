@@ -26,6 +26,13 @@ class Presentation extends Component {
               colorRGB={'rgba(233,168,65,1)'}
             >
               {valueString.work_with_me}
+              <a
+                rel="noopener noreferrer"
+                href="https://chingu.io"
+                target="_blank"
+              >
+                Chingu.io
+              </a>
             </BannerWithMessage>
 
             <BannerWithMessage
