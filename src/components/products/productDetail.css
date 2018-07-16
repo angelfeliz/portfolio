@@ -30,7 +30,7 @@
 .detail_box_product {
     width: 25%;  
     cursor: pointer; 
-    margin: 2px 2px 2px 2px;  
+    margin: .6% .6% .6% .6%;  
     -moz-mergin: 2px 2px 2px 2px;
     -o-mergin: 2px 2px 2px 2px;
     -webkit-mergin: 2px 2px 2px 2px;   

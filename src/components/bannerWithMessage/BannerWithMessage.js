@@ -29,7 +29,7 @@ class BannerWithMessage extends Component {
     console.log(this.props.palletColor)
     return (
       <div className="banner">
-        <div style={styles}>
+        <div style={styles} className="shadowing">
           <span className="title-banner">{this.props.title.toUpperCase()}</span>
         </div>
 

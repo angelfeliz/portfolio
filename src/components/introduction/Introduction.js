@@ -8,13 +8,14 @@ class Introduction extends Component {
     return (
       <div className="bg-image-section-1">
         <section className="container_screen">
-          <div className="image_front_picture">
-            <img className="me" src={require('../../images/me.jpg')} />
-          </div>
-          <div className="naming">
-            <h1 className="title">Angel Rodriguez</h1>
-            <h2 className="subtitle">Software Developer</h2>
-            <p className="shortSummary">{valueString.about}</p>
+          {/* <div className="image_front_picture"> */}
+          <img className="me shadowing" src={require('../../images/me.jpg')} />
+          <div className="short-about">
+            <div className="naming shadowing">
+              <h1 className="title">Angel Rodriguez</h1>
+              <h2 className="subtitle">Software Developer</h2>
+            </div>
+            <p className="shortSummary shadowing">{valueString.about}</p>
           </div>
         </section>
       </div>
