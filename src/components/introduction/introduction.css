@@ -89,7 +89,8 @@
    border-radius: 0;
   }
   .container_screen {  
-    grid-template-columns: [first] 20% [second] 80%;
+    grid-template-columns: [first] 100%;
+    height: auto;
   }
   .shortSummary {
     margin-top: 0;
@@ -97,5 +98,8 @@
     padding-top:2.5%;
     background-color: #1c534c;
     color:white;
+  }
+  .bg-image-section-1 {
+    height: auto;
   }
 }

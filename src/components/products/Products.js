@@ -20,7 +20,8 @@ class Products extends Component {
         tab1: true,
         tab2: false,
         selected: 'tab1'
-      }
+      },
+      showModal: true
     }
   }
 
@@ -88,6 +89,7 @@ class Products extends Component {
 
     return (
       <div className="bg-blue product_full_container">
+        {this.state.showModal ? <ProductDetail /> : null}
         {this.state.showProductDetail ? (
           <ProductDetail
             show={showModal}

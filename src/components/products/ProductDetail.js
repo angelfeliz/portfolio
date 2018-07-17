@@ -21,31 +21,19 @@ class ProductDetail extends Component {
   }
   render () {
     return (
-      <div className={`full_screen ${this.props.show}`}>
-        <div className="columns board_detail">
-          <div className="column is-two-fifths left-side_detail">
-            <img src="https://bulma.io/images/placeholders/256x256.png" />
-            <h4>{this.props.repo}</h4>
-          </div>
-          <div className="column right-side_detail">
-            <div className="is-pulled-right">
-              <button
-                className=""
-                onClick={() => {
-                  this.props.onClickCloseModal()
-                }}
-              >
-                close
-              </button>
-              <i className="has-text-left">{this.props.url}</i>
-              <span
-                className="has-text-justified"
-                dangerouslySetInnerHTML={{
-                  __html: this.markerToText(this.state.readme)
-                }}
-              />
-              <div className="child-div"> </div>
+      <div className="modal">
+        <div className="flex-col">
+          <div className="flex-row">
+            <div className="white-box" />
+            <div className="flex-col">
+              <div className="white-box" />
+              <div className="white-box" />
             </div>
+          </div>
+          <div className="flex-row">
+            <div className="white-box" />
+            <div className="white-box" />
+            <div className="white-box" />
           </div>
         </div>
       </div>
