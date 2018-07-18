@@ -22,19 +22,14 @@ class ProductDetail extends Component {
   render () {
     return (
       <div className="modal">
-        <div className="flex-col">
-          <div className="flex-row">
-            <div className="white-box" />
-            <div className="flex-col">
-              <div className="white-box" />
-              <div className="white-box" />
-            </div>
-          </div>
-          <div className="flex-row">
-            <div className="white-box" />
-            <div className="white-box" />
-            <div className="white-box" />
-          </div>
+        <div className="grid-container">
+          <div className="use_case" />
+          <div className="project_img_1" />
+          <div className="project_img_2" />
+          <div className="project_img_3" />
+          <div className="project_img_3" />
+          <div className="detail" />
+          <div className="logo" />
         </div>
       </div>
     )
