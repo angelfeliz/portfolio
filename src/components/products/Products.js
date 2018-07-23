@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ProductDetail from './ProductDetail'
 import { getAllRepo, listOfRepoToShow } from '../../helpers/gitHubApi'
 import { palletColors } from '../../helpers/valueString'
+import clientsProject from '../../helpers/clientsProjectsDoc'
 import ProductShowcase from './ProductShowcase'
 import './productDetail.css'
 
@@ -14,6 +15,7 @@ class Products extends Component {
       showProductDetail: false,
       gitHub_repositories_own: [],
       gitHub_repositories_forks: [],
+      clients_proyects: clientsProject,
       owner: '',
       repo: '',
       tabs: {
@@ -21,13 +23,10 @@ class Products extends Component {
         tab2: false,
         selected: 'tab1'
       },
-      showModal: true
+      details: {}
     }
   }
 
-  productDetail = (owner, repo) => {
-    this.setState({ ...this.state, showProductDetail: true, owner, repo })
-  }
   onClickCloseModal = () => {
     this.setState({ ...this.state, showProductDetail: false })
   }
@@ -37,24 +36,35 @@ class Products extends Component {
   tabSelected = tabs => {
     this.setState({ ...this.state, tabs: { ...this.state.tabs, ...tabs } })
   }
+  openDetails = name => {
+    let item = this.state.clients_proyects.find(function (item) {
+      return item
+    })
+
+    this.setState({
+      ...this.state,
+      showProductDetail: true,
+      details: { ...item }
+    })
+  }
   componentDidMount () {
     getAllRepo()
       .then(res => {
         let own = res.filter(item => {
-          if (item.fork === false && listOfRepoToShow[item.name] === true) {
+          if (listOfRepoToShow[item.name] === true) {
             return item
           }
         })
 
-        let forks = res.filter(item => {
+        /* let forks = res.filter(item => {
           if (item.fork && listOfRepoToShow[item.name]) {
             return item
           }
-        })
+        }) */
         this.setState({
           ...this.state,
-          gitHub_repositories_own: own,
-          gitHub_repositories_forks: forks
+          gitHub_repositories_own: own
+          // gitHub_repositories_forks: forks
         })
       })
       .catch(err => console.log(err))
@@ -73,30 +83,25 @@ class Products extends Component {
           />
         )
       }),
-      tab2: this.state.gitHub_repositories_forks.map((item, index) => {
+      tab2: this.state.clients_proyects.map((item, index) => {
         return (
           <ProductShowcase
             key={index}
             index={index}
             name={item.name}
             palletColors={palletColors()}
-            onClickProduct={this.goToGitHubLink}
+            onClickProduct={this.openDetails}
           />
         )
       })
     }
-    let showModal = this.state.showProductDetail ? 'show_modal' : 'hidden_modal'
 
     return (
       <div className="bg-blue product_full_container">
-        {this.state.showModal ? <ProductDetail /> : null}
         {this.state.showProductDetail ? (
           <ProductDetail
-            show={showModal}
             onClickCloseModal={this.onClickCloseModal}
-            url={'www.githgub.com'}
-            owner={this.state.owner}
-            repo={this.state.repo}
+            details={this.state.details}
           />
         ) : null}
 
@@ -110,7 +115,7 @@ class Products extends Component {
               this.tabSelected({ tab1: true, tab2: false, selected: 'tab1' })
             }
           >
-            Private
+            GitHub
           </span>
           <span
             className={`tab_botton ${
@@ -120,7 +125,7 @@ class Products extends Component {
               this.tabSelected({ tab1: false, tab2: true, selected: 'tab2' })
             }
           >
-            Collaborated
+            Clients
           </span>
           <div className="flex_container-row">
             {repoDependOnTabActive[this.state.tabs.selected]}
