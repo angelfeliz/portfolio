@@ -1,7 +1,13 @@
 export default {
-  en:[{
-    name: 'Budget Planning System'
-  }],
+  en: [
+        {
+          name: 'Budget Planning System',
+          useCase: 'The budget management process of company X, in its'
+                  +' constructor stage, had a lower capacity than the'
+                  +' demand to which it was addressed,'
+                  +' in other words, there was a "bottleneck"'
+        }
+  ],
   es: [
         {
           name: 'Sistema de Planificación Presupuestaria',
