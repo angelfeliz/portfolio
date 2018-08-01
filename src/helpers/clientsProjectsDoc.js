@@ -2,10 +2,17 @@ export default {
   en: [
         {
           name: 'Budget Planning System',
-          useCase: 'The budget management process of company X, in its'
-                  +' constructor stage, had a lower capacity than the'
+          useCase: 'The budget management process of company X, in it'
+                  +' manual constructor stage, had a lower capacity than the'
                   +' demand to which it was addressed,'
                   +' in other words, there was a "bottleneck"'
+                  +' due of the mandatory coordination of the paper work activity that required the process in'
+                  +' all the departments in company.'
+                  +' The process flow is gathering the information for the anual budget is execute through excel sheet in each department,'
+                  +' which then all the excel documents are delivered to one persone for there approve and consolidate in  , '
+                  
+                  El proceso de recolección de información presupuestal anual se ejecutaba a través de hojas de Excel 
+                  que un usuario aprobador debía consolidar en un presupuesto general de la empresa corrigiendo:
         }
   ],
   es: [
