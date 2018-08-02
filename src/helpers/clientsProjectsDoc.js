@@ -21,7 +21,10 @@ export default {
                   +' It should be noted that the software solution, implemented,'
                   +' fixed the manuel process and reduce the working'
                   +' time in more than the half. Solution automaize the register of'
-                  +' budgetary information through '
+                  +' budgetary information through catalogs of items, assets, sell,'
+                  +' maintenance, associated with accounting accounts by department./n'
+                  +' '
+
                   
                   
         }
