@@ -15,7 +15,7 @@ class Products extends Component {
       showProductDetail: false,
       gitHub_repositories_own: [],
       gitHub_repositories_forks: [],
-      clients_proyects: clientsProject,
+      clients_proyects: clientsProject['en'],
       owner: '',
       repo: '',
       tabs: {

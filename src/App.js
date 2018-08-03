@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import Introduction from './components/introduction/Introduction'
 import Presentation from './components/presentation/Presentation'
 import Products from './components/products/Products'
@@ -24,7 +24,7 @@ class App extends Component {
   render () {
     console.log(this.state.showMenu)
     return (
-      <div>
+      <Fragment>
         <div className="bar_nav">
           <div>
             <span
@@ -49,13 +49,30 @@ class App extends Component {
               <a href="#">Contact</a>
             </li>
           </ul>
+          <div>
+            <span
+              className={`language ${
+                this.state.language == 'EN' ? 'active' : null
+              }`}
+            >
+              EN
+            </span>{' '}
+            |{' '}
+            <span
+              className={`language ${
+                this.state.language == 'ES' ? 'active' : null
+              }`}
+            >
+              ES
+            </span>
+          </div>
         </div>
         <Introduction />
         <Presentation />
         <ParallaxBanner />
         <Products />
         <Contact />
-      </div>
+      </Fragment>
     )
   }
 }
