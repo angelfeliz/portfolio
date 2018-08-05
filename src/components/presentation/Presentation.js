@@ -21,11 +21,11 @@ class Presentation extends Component {
         <section className="inner_section-01">
           <div className="banners">
             <BannerWithMessage
-              title={'Why work with me?'}
+              title={valueString[this.props.language].work_with_me[0]}
               palletColor={'#cacfd5'}
               colorRGB={'rgba(233,168,65,1)'}
             >
-              {valueString.work_with_me}
+              {valueString[this.props.language].work_with_me[1]}
               <a
                 rel="noopener noreferrer"
                 href="https://chingu.io"
@@ -36,19 +36,19 @@ class Presentation extends Component {
             </BannerWithMessage>
 
             <BannerWithMessage
-              title={'Team work'}
+              title={valueString[this.props.language].team[0]}
               palletColor={'#cacfd5'}
               colorRGB={'rgba(49,61,84,1)'}
             >
-              {valueString.team}
+              {valueString[this.props.language].team[1]}
             </BannerWithMessage>
 
             <BannerWithMessage
-              title={'About coding'}
+              title={valueString[this.props.language].code[0]}
               palletColor={'#cacfd5'}
               colorRGB={'rgba(24,95,76,1)'}
             >
-              {valueString.code}
+              {valueString[this.props.language].code[1]}
             </BannerWithMessage>
           </div>
         </section>

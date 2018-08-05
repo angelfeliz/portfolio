@@ -17,10 +17,19 @@ const Productshowcase = props => {
     <div key={props.index} className="detail_box_product shadowing">
       <div
         className="img_box_product"
-        onClick={() => props.onClickProduct(props.name)}
+        onClick={() => props.onClickProduct(props.code)}
       >
         <div style={layout}>
           <span style={{ color: 'white' }}>{props.name}</span>
+          <p
+            style={{
+              fontStyle: 'italic',
+              fontSize: '10px',
+              justifyContent: 'center'
+            }}
+          >
+            click for detail
+          </p>
         </div>
       </div>
     </div>

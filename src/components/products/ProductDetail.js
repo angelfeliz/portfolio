@@ -10,15 +10,6 @@ class ProductDetail extends Component {
       readme: ''
     }
   }
-  /*  markerToText = text => {
-    let converter = new showdown.Converter()
-    return converter.makeHtml(text)
-  }
-  componentDidMount () {
-    getReadme(this.props.owner, this.props.repo).then(data => {
-      this.setState({ ...this.state, readme: data })
-    })
-  } */
   render () {
     console.log('item ', this.props)
     return (
@@ -31,13 +22,25 @@ class ProductDetail extends Component {
         <div className="grid-container">
           <div className="use_case">
             <h2>{this.props.details.name}</h2>
+            <p>{this.props.details.useCase}</p>
           </div>
-          <div className="project_img_1" />
-          <div className="project_img_2" />
-          <div className="project_img_3" />
-          <div className="project_img_3" />
-          <div className="detail" />
-          <div className="logo" />
+          <div className="project_img_1">
+            <img src={this.props.details.images[0]} />
+          </div>
+          <div className="project_img_2">
+            <img src={this.props.details.images[1]} />
+          </div>
+          <div className="project_img_3">
+            <img src={this.props.details.images[2]} />
+          </div>
+
+          <div className="detail">
+            <h4>Stack used in the project</h4>
+            <p>{this.props.details.stack}</p>
+          </div>
+          <div className="logo">
+            <img src={this.props.details.logo} />
+          </div>
         </div>
       </div>
     )

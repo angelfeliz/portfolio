@@ -29,6 +29,8 @@
     align-items: center;*/
     grid-template-columns: 25% 25% 50%;
     grid-template-rows: 25vh 25vh 25vh 25vh;
+    grid-column-gap: .3%;
+    grid-row-gap: .5%;
     grid-template-areas:
         "use_case use_case project_img_1"
         "use_case use_case  project_img_2"
@@ -46,14 +48,27 @@
     grid-area: project_img_1; 
 }
 
+.project_img_1 img {
+    width: 100%;
+    height: 100%;
+}
 .project_img_2 {
     background-color: yellow;
     grid-area: project_img_2;
+}
+.project_img_2 img {
+    width: 100%;
+    height: 100%;
 }
 
 .project_img_3 {
     background-color: GREEN;
     grid-area: project_img_3;
+}
+
+.project_img_3 img {
+    width: 100%;
+    height: 100%;
 }
 
 .detail {
@@ -66,11 +81,15 @@
     background-color: black;
 }
 
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
 
 
 .white-box { 
     width: 100%;
-    height: 100%;
     height: auto;
     background-color: white;
     margin: 2%;
@@ -173,4 +192,3 @@
         width: 25%;     
     }
   }
-

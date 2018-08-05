@@ -15,7 +15,7 @@ class Products extends Component {
       showProductDetail: false,
       gitHub_repositories_own: [],
       gitHub_repositories_forks: [],
-      clients_proyects: clientsProject['en'],
+      clients_proyects: Object.keys(clientsProject[this.props.language]),
       owner: '',
       repo: '',
       tabs: {
@@ -37,14 +37,13 @@ class Products extends Component {
     this.setState({ ...this.state, tabs: { ...this.state.tabs, ...tabs } })
   }
   openDetails = name => {
-    let item = this.state.clients_proyects.find(function (item) {
-      return item
-    })
+    let detail = clientsProject[this.props.language][name]
+    console.log('detail ', detail)
 
     this.setState({
       ...this.state,
       showProductDetail: true,
-      details: { ...item }
+      details: { ...detail }
     })
   }
   componentDidMount () {
@@ -78,6 +77,7 @@ class Products extends Component {
             key={index}
             index={index}
             name={item.name}
+            code={item.name}
             palletColors={palletColors()}
             onClickProduct={this.goToGitHubLink}
           />
@@ -88,7 +88,8 @@ class Products extends Component {
           <ProductShowcase
             key={index}
             index={index}
-            name={item.name}
+            name={clientsProject[this.props.language][item]['name']}
+            code={item}
             palletColors={palletColors()}
             onClickProduct={this.openDetails}
           />

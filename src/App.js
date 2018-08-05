@@ -4,15 +4,39 @@ import Presentation from './components/presentation/Presentation'
 import Products from './components/products/Products'
 import ParallaxBanner from './components/paralaxBanner/ParalaxBanner'
 import Contact from './components/contact/Contact'
+import MenuFixedHorizonte from './components/ui/MenuFixedHorizonte'
 import './App.css'
 import './components/styles.css'
 import 'font-awesome/css/font-awesome.css'
 
+const TOP_MENU = {
+  en: [
+    {
+      link: '#about',
+      name: 'About'
+    },
+    {
+      link: '#projets',
+      name: 'Projets'
+    }
+  ],
+  es: [
+    {
+      link: '#about',
+      name: 'Sobre mi'
+    },
+    {
+      link: '#projets',
+      name: 'Proyectos'
+    }
+  ]
+}
 class App extends Component {
   constructor () {
     super()
     this.state = {
-      showMenu: true
+      showMenu: true,
+      language: 'en'
     }
   }
   onClickShowMenu = () => {
@@ -25,53 +49,33 @@ class App extends Component {
     console.log(this.state.showMenu)
     return (
       <Fragment>
-        <div className="bar_nav">
+        <MenuFixedHorizonte listMenu={TOP_MENU[this.state.language]}>
           <div>
             <span
-              className="hamberguericon"
-              onClick={() => this.onClickShowMenu()}
-            >
-              <i className="fa fa-bars fa-2x icon_hamber_icon_color" />
-            </span>
-          </div>
-          <ul
-            className={`${
-              this.state.showMenu ? 'navigation' : 'navigation navigation_show'
-            }`}
-          >
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#">Projects</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-          <div>
-            <span
-              className={`language ${
-                this.state.language == 'EN' ? 'active' : null
+              className={`shadowing ${
+                this.state.language === 'en' ? 'active' : null
               }`}
+              onClick={() => this.setState({ ...this.state, language: 'en' })}
             >
               EN
-            </span>{' '}
-            |{' '}
+            </span>
+
             <span
-              className={`language ${
-                this.state.language == 'ES' ? 'active' : null
+              className={`shadowing ${
+                this.state.language === 'es' ? 'active' : null
               }`}
+              onClick={() => this.setState({ ...this.state, language: 'es' })}
             >
               ES
             </span>
           </div>
-        </div>
-        <Introduction />
-        <Presentation />
-        <ParallaxBanner />
-        <Products />
-        <Contact />
+        </MenuFixedHorizonte>
+
+        <Introduction language={this.state.language} />
+        <Presentation language={this.state.language} />
+        <ParallaxBanner language={this.state.language} />
+        <Products language={this.state.language} />
+        <Contact language={this.state.language} />
       </Fragment>
     )
   }

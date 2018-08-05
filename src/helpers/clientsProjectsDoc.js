@@ -1,6 +1,6 @@
 export default {
-  en: [
-    {
+  en: {
+    presupuesto: {
       name: 'Budget Planning System',
       useCase:
         'The budget management process of company X, in it' +
@@ -25,11 +25,18 @@ export default {
         ' budgetary information through catalogs of items, assets, sell,' +
         ' maintenance, associated with accounting accounts by department,' +
         ' as result a better quality and integration of the data./n',
-      stack: '.NET, Vue.js, SQL, Azure'
+      stack: '.NET, Vue.js, SQL, Azure',
+      images: [
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/dashBoard_2.png',
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/Presupuesto.png',
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/gastos.png'
+      ],
+      logo:
+        'http://www.srlsti.com/wp-content/uploads/2017/02/cropped-test9b.png'
     }
-  ],
-  es: [
-    {
+  },
+  es: {
+    presupuesto: {
       name: 'Sistema de Planificación Presupuestaria',
       useCase:
         'El proceso de gestión de presupuesto de la empresa X,' +
@@ -59,7 +66,14 @@ export default {
         ' consultado a través de gráficas y reportes.\n El tiempo estimado' +
         ' de duración del proceso de formulación presupuestaria a través' +
         ' del Sistema de Planificación Presupuestaria se estima en menos de 15 días:',
-      stack: '.NET, Vue.js, SQL, Azure'
+      stack: '.NET, Vue.js, SQL, Azure',
+      images: [
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/dashBoard_2.png',
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/Presupuesto.png',
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/gastos.png'
+      ],
+      logo:
+        'http://www.srlsti.com/wp-content/uploads/2017/02/cropped-test9b.png'
     }
-  ]
+  }
 }

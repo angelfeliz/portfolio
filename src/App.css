@@ -1,10 +1,32 @@
+
 .bar_nav {
-   background-color: rgba(49, 61, 84, 0.6);
-   position: absolute;
-   width: 100%;
-   position: fixed;
+   background-color: rgba(49, 61, 84, 1);
+   position: relative;   
+   display:flex;
+   flex-direction: row;
+}
+.one-left_botton {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1%;
 }
 
+.one-left_botton  span {
+  padding: 1.4%;
+  cursor: pointer;
+  border: 1px solid black;
+  margin-right: .3%;
+}
+.rigth_section_nav {
+  flex-grow: 1;
+  display: inline;
+}
+.active {
+  background-color: #1c534c;
+  color: white;
+}
 .navigation {
   list-style: none;
   margin: 0; 
