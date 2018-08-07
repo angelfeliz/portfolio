@@ -24,7 +24,7 @@ export default {
         ' time in more than the half. Solution automaize the register of' +
         ' budgetary information through catalogs of items, assets, sell,' +
         ' maintenance, associated with accounting accounts by department,' +
-        ' as result a better quality and integration of the data./n',
+        ' as result a better quality and integration of the data.\n',
       stack: '.NET, Vue.js, SQL, Azure',
       images: [
         'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/dashBoard_2.png',
@@ -33,6 +33,14 @@ export default {
       ],
       logo:
         'http://www.srlsti.com/wp-content/uploads/2017/02/cropped-test9b.png'
+    },
+    asistencia: {
+      name: 'Attendance module - WTV',
+      useCase: '',
+      stack: 'Node.js, React.js, Express.js, Azure',
+      images: ['', '', ''],
+      logo:
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1533617562/portfolio/wtv/wtv_logo.png'
     }
   },
   es: {
@@ -74,6 +82,14 @@ export default {
       ],
       logo:
         'http://www.srlsti.com/wp-content/uploads/2017/02/cropped-test9b.png'
+    },
+    asistencia: {
+      name: 'Modulo de asistencia - WTV',
+      useCase: '',
+      stack: 'Node.js, React.js, Express.js, Azure',
+      images: ['', '', ''],
+      logo:
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1533617562/portfolio/wtv/wtv_logo.png'
     }
   }
 }

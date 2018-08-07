@@ -126,7 +126,7 @@ class Products extends Component {
               this.tabSelected({ tab1: false, tab2: true, selected: 'tab2' })
             }
           >
-            Clients
+            Projects
           </span>
           <div className="flex_container-row">
             {repoDependOnTabActive[this.state.tabs.selected]}

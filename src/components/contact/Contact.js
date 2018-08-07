@@ -38,7 +38,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="contact-paragraph">
-          <p>Hope to hear from you! Best regards.</p>
+          <p>Build with ReactJs! Best regards.</p>
         </div>
       </div>
     </section>

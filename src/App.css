@@ -4,6 +4,7 @@
    position: relative;   
    display:flex;
    flex-direction: row;
+   height: auto;
 }
 .one-left_botton {
   flex-grow: 2;
@@ -14,10 +15,13 @@
 }
 
 .one-left_botton  span {
-  padding: 1.4%;
+  padding: 0.4%;
   cursor: pointer;
   border: 1px solid black;
   margin-right: .3%;
+  display: inline-block;
+  margin-top: .5%;
+  margin-bottom: .5%;
 }
 .rigth_section_nav {
   flex-grow: 1;
@@ -69,7 +73,7 @@
   }
 
   .bar_nav {
-    background: transparent;    
+    background-color: rgba(49, 61, 84, 1); 
   }
 
   .hamberguericon {
@@ -110,7 +114,7 @@
     display: inline;
   }
   .bar_nav {
-    background: transparent;    
+    background-color: rgba(49, 61, 84, 1);
   } 
   
   .navigation_show {

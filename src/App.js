@@ -9,7 +9,7 @@ import './App.css'
 import './components/styles.css'
 import 'font-awesome/css/font-awesome.css'
 
-const TOP_MENU = {
+/* const TOP_MENU = {
   en: [
     {
       link: '#about',
@@ -30,7 +30,7 @@ const TOP_MENU = {
       name: 'Proyectos'
     }
   ]
-}
+} */
 class App extends Component {
   constructor () {
     super()
@@ -49,7 +49,7 @@ class App extends Component {
     console.log(this.state.showMenu)
     return (
       <Fragment>
-        <MenuFixedHorizonte listMenu={TOP_MENU[this.state.language]}>
+        <MenuFixedHorizonte listMenu={[]}>
           <div>
             <span
               className={`shadowing ${
