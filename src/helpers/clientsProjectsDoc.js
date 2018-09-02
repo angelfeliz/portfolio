@@ -85,7 +85,12 @@ export default {
     },
     asistencia: {
       name: 'Modulo de asistencia - WTV',
-      useCase: '',
+      useCase:
+        'Existe la necesidad de guardar las asistencias de los ' +
+        'eventos que son creado y gestionado por World Television(WTV) entregar ' +
+        'un listado de participacion y el resumen de duracion de horas de los participantes, ' +
+        'en un formato tabular.\n El registro de la asistencia tiene que ser fluido y rapido para ' +
+        ' crear un cuello de botella en la puerta de entrada del evento',
       stack: 'Node.js, React.js, Express.js, Azure',
       images: ['', '', ''],
       logo:
