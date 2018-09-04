@@ -14,7 +14,7 @@ const Productshowcase = props => {
     fontWeight: '100'
   }
   return (
-    <div key={props.index} className="detail_box_product shadowing">
+    <div key={props.index}>
       <div
         className="img_box_product"
         onClick={() => props.onClickProduct(props.code)}

@@ -5,6 +5,7 @@ import { palletColors } from '../../helpers/valueString'
 import clientsProject from '../../helpers/clientsProjectsDoc'
 import ProductShowcase from './ProductShowcase'
 import './productDetail.css'
+import { Link } from 'react-router-dom';
 
 // import beach from '../images/sea-bay-waterfront-beach.jpeg'
 
@@ -73,26 +74,35 @@ class Products extends Component {
     let repoDependOnTabActive = {
       tab1: this.state.gitHub_repositories_own.map((item, index) => {
         return (
-          <ProductShowcase
-            key={index}
-            index={index}
-            name={item.name}
-            code={item.name}
-            palletColors={palletColors()}
-            onClickProduct={this.goToGitHubLink}
-          />
+          <div className= "detail_box_product shadowing">
+              <ProductShowcase
+                key={index}
+                index={index}
+                name={item.name}
+                code={item.name}
+                palletColors={palletColors()}
+                onClickProduct={this.goToGitHubLink}
+              />
+          </div>
         )
       }),
       tab2: this.state.clients_proyects.map((item, index) => {
         return (
+          <Link className="detail_box_product shadowing text-none-decoration" to= {{
+              pathname: '/product',
+              state: {
+                name: clientsProject[this.props.language][item]['name'],
+                code: item
+              }
+            }}>
           <ProductShowcase
             key={index}
             index={index}
             name={clientsProject[this.props.language][item]['name']}
             code={item}
-            palletColors={palletColors()}
-            onClickProduct={this.openDetails}
+            palletColors={palletColors()}           
           />
+          </Link>
         )
       })
     }
