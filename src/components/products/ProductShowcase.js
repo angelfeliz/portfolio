@@ -36,4 +36,7 @@ const Productshowcase = props => {
   )
 }
 
+Productshowcase.defaultProps = {
+  onClickProduct: function(){}
+}
 export default Productshowcase

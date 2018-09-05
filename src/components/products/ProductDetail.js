@@ -9,10 +9,10 @@ class ProductDetail extends Component {
     super(props)
     this.state = {
       readme: '',
-      detail: {}
+      details: {}
     }
   }
- /* openDetails = name => {
+  /* openDetails = name => {
     let detail = clientsProject[this.props.language][name]
     console.log('detail ', detail)
 
@@ -21,25 +21,24 @@ class ProductDetail extends Component {
       showProductDetail: true,
       details: { ...detail }
     })
-  }*/
-  componentDidMount() {
-    console.log('prop', this.props)
-      let detail = clientsProject[this.props.language]['presupuesto']      
-      
-      this.setState({
-        ...this.state,        
-        details: { ...detail }
-      })
+  } */
+  componentDidMount () {
+    
+    let key = this.props.location.state.code || 'presupuesto';
+    let lan = this.props.location.language || 'en'
+    let detail = clientsProject['en']['presupuesto'];
+    console.log('prop', detail);
+    this.setState({
+      ...this.state,
+      details: { ...detail }
+    })
   }
-  render () {    
-    return (
-      <div className="modal">
-        <div className="button_container" style={{display: 'none'}}>
-          <button onClick={() => this.props.onClickCloseModal()}>
-            <i className="fa fa-window-close-o fa-2x" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="grid-container">
+  render () {
+    console.log('state ', this.state)
+    return (  
+      <p>hello</p>   
+    /* <div>
+       <div className="grid-container">
           <div className="use_case">
             <h2>{this.state.details.name}</h2>
             <p>{this.state.details.useCase}</p>
@@ -61,8 +60,9 @@ class ProductDetail extends Component {
           <div className="logo">
             <img src={this.state.details.logo} />
           </div>
-        </div>
+         </div>
       </div>
+    */
     )
   }
 }

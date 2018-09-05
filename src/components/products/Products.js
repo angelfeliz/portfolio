@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import ProductDetail from './ProductDetail'
+//import ProductDetail from './ProductDetail'
 import { getAllRepo, listOfRepoToShow } from '../../helpers/gitHubApi'
 import { palletColors } from '../../helpers/valueString'
 import clientsProject from '../../helpers/clientsProjectsDoc'
 import ProductShowcase from './ProductShowcase'
 import './productDetail.css'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 // import beach from '../images/sea-bay-waterfront-beach.jpeg'
 
@@ -74,34 +74,37 @@ class Products extends Component {
     let repoDependOnTabActive = {
       tab1: this.state.gitHub_repositories_own.map((item, index) => {
         return (
-          <div className= "detail_box_product shadowing">
-              <ProductShowcase
-                key={index}
-                index={index}
-                name={item.name}
-                code={item.name}
-                palletColors={palletColors()}
-                onClickProduct={this.goToGitHubLink}
-              />
+          <div className="detail_box_product shadowing">
+            <ProductShowcase
+              key={index}
+              index={index}
+              name={item.name}
+              code={item.name}
+              palletColors={palletColors()}
+              onClickProduct={this.goToGitHubLink}
+            />
           </div>
         )
       }),
       tab2: this.state.clients_proyects.map((item, index) => {
         return (
-          <Link className="detail_box_product shadowing text-none-decoration" to= {{
+          <Link
+            className="detail_box_product shadowing text-none-decoration"
+            to={{
               pathname: '/product',
               state: {
                 name: clientsProject[this.props.language][item]['name'],
                 code: item
               }
-            }}>
-          <ProductShowcase
-            key={index}
-            index={index}
-            name={clientsProject[this.props.language][item]['name']}
-            code={item}
-            palletColors={palletColors()}           
-          />
+            }}
+          >
+            <ProductShowcase
+              key={index}
+              index={index}
+              name={clientsProject[this.props.language][item]['name']}
+              code={item}
+              palletColors={palletColors()}
+            />
           </Link>
         )
       })
@@ -109,12 +112,7 @@ class Products extends Component {
 
     return (
       <div className="bg-blue product_full_container">
-        {this.state.showProductDetail ? (
-          <ProductDetail
-            onClickCloseModal={this.onClickCloseModal}
-            details={this.state.details}
-          />
-        ) : null}
+        
 
         {/* <!--portfolio--> */}
         <section>
