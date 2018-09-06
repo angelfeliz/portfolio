@@ -20,28 +20,29 @@
     padding: .5%;
 }
 
-.grid-container {  
-   
+.grid-container {   
     display: grid;
     height: 100vh;
     width:100%;
    /* justify-content: center;
     align-items: center;*/
-    grid-template-columns: 25% 25% 50%;
-    grid-template-rows: 25vh 25vh 25vh 25vh;
-    grid-column-gap: .3%;
+    grid-template-columns: 25% 70%;
+    grid-template-rows: 60% auto;
+    grid-column-gap: .4%;
     grid-row-gap: .5%;
     grid-template-areas:
-        "use_case use_case project_img_1"
-        "use_case use_case  project_img_2"
-        "detail logo project_img_3";   
+        "logo logo"
+        "detail use_case"
+        "detail project_img_1"
+        "detail project_img_2"
+        "detail project_img_3";   
 }
 
 .use_case {
     grid-area: use_case;
     background-color: white;
-    padding: 0 1.3% 0 1.3%;
-    overflow-y: scroll;
+   /* padding: 0 1.3% 0 1.3%;
+    overflow-y: scroll;*/
 }
 .use_case h2 {
     font-weight: 200;
@@ -100,12 +101,16 @@
 
 .logo {
     grid-area: logo;
-    background-color: black;
+    display: inherit;
+    background-color: #ffff;
+    margin: 0 auto;
+    display: inherit;
+    align-content: center;
 }
 
 .logo img {
-    width: 100%;
-    height: 100%;
+   
+    
 }
 
 

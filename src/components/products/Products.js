@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-//import ProductDetail from './ProductDetail'
+// import ProductDetail from './ProductDetail'
 import { getAllRepo, listOfRepoToShow } from '../../helpers/gitHubApi'
 import { palletColors } from '../../helpers/valueString'
 import clientsProject from '../../helpers/clientsProjectsDoc'
@@ -112,8 +112,6 @@ class Products extends Component {
 
     return (
       <div className="bg-blue product_full_container">
-        
-
         {/* <!--portfolio--> */}
         <section>
           <span

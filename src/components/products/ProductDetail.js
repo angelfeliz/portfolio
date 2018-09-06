@@ -9,7 +9,9 @@ class ProductDetail extends Component {
     super(props)
     this.state = {
       readme: '',
-      details: {}
+      details: {
+        images: []
+      }
     }
   }
   /* openDetails = name => {
@@ -23,22 +25,23 @@ class ProductDetail extends Component {
     })
   } */
   componentDidMount () {
-    
-    let key = this.props.location.state.code || 'presupuesto';
+    let key = this.props.location.state.code || 'presupuesto'
     let lan = this.props.location.language || 'en'
-    let detail = clientsProject['en']['presupuesto'];
-    console.log('prop', detail);
+    let detail = clientsProject['en']['presupuesto']
+    console.log('prop', detail)
     this.setState({
       ...this.state,
       details: { ...detail }
     })
   }
   render () {
-    console.log('state ', this.state)
-    return (  
-      <p>hello</p>   
-    /* <div>
+    console.log('state ', this.state.details)
+    return (   
+       <div>
        <div className="grid-container">
+          <div className="logo">
+            <img src={this.state.details.logo} />
+          </div>
           <div className="use_case">
             <h2>{this.state.details.name}</h2>
             <p>{this.state.details.useCase}</p>
@@ -57,12 +60,10 @@ class ProductDetail extends Component {
             <h4>Stack used in the project</h4>
             <p>{this.state.details.stack}</p>
           </div>
-          <div className="logo">
-            <img src={this.state.details.logo} />
-          </div>
+        
          </div>
       </div>
-    */
+    
     )
   }
 }

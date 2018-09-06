@@ -8,7 +8,7 @@ import registerServiceWorker from './registerServiceWorker'
 
 const MainApp = () => (
   <Router>
-    <Switch>      
+    <Switch>
       <Route path="/product" component={Product} />
       <Route exac path="/" component={App} />
     </Switch>
