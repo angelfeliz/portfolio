@@ -36,9 +36,9 @@ class ProductDetail extends Component {
   }
   render () {
     console.log('state ', this.state.details)
-    return (   
-       <div>
-       <div className="grid-container">
+    return (
+      <div>
+        <div className="grid-container">
           <div className="logo">
             <img src={this.state.details.logo} />
           </div>
@@ -57,13 +57,31 @@ class ProductDetail extends Component {
           </div>
 
           <div className="detail">
-            <h4>Stack used in the project</h4>
-            <p>{this.state.details.stack}</p>
+            <div className="elements-top">              
+                  <label>Type product</label>
+                  <span>Client work</span>                                
+            </div>
+            <div className="elements">
+                <div className="element">
+                  <label>Segments</label>
+                  <ul className="unstyle_list">
+                    <li><span>Frondend development</span></li>
+                    <li>Backend development</li>
+                  </ul>
+                </div>
+                <div className="stack">
+                  <label>Stack</label>
+                  <ul className="unstyle_list">
+                   { 
+                     this.state.details.stack.map(item => (<li>{ item }</li>))
+                   }
+                  </ul>
+                  
+                </div>
+            </div>
           </div>
-        
-         </div>
+        </div>
       </div>
-    
     )
   }
 }

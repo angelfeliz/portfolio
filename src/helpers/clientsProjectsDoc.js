@@ -25,14 +25,14 @@ export default {
         ' budgetary information through catalogs of items, assets, sell,' +
         ' maintenance, associated with accounting accounts by department,' +
         ' as result a better quality and integration of the data.\n',
-      stack: '.NET, Vue.js, SQL, Azure',
+      stack: ['.NET', 'Vue.js', 'SQL, Azure'],
       images: [
         'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/dashBoard_2.png',
         'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/Presupuesto.png',
         'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/gastos.png'
       ],
       logo:
-        'http://www.srlsti.com/wp-content/uploads/2017/02/cropped-test9b.png'
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1536590869/portfolio/presupuesto/sti-logo.jpg'
     },
     asistencia: {
       name: 'Attendance module - WTV',
