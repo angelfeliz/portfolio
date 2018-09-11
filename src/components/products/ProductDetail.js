@@ -10,7 +10,7 @@ class ProductDetail extends Component {
     this.state = {
       readme: '',
       details: {
-        images: []
+        ...clientsProject['en']['presupuesto']
       }
     }
   }
@@ -25,14 +25,14 @@ class ProductDetail extends Component {
     })
   } */
   componentDidMount () {
-    let key = this.props.location.state.code || 'presupuesto'
-    let lan = this.props.location.language || 'en'
-    let detail = clientsProject['en']['presupuesto']
-    console.log('prop', detail)
-    this.setState({
+    // let key = this.props.location.state.code || 'presupuesto'
+    // let lan = this.props.location.language || 'en'
+    // let detail = clientsProject['en']['presupuesto']
+    // console.log('prop', detail)
+    /* this.setState({
       ...this.state,
       details: { ...detail }
-    })
+    }) */
   }
   render () {
     console.log('state ', this.state.details)
@@ -57,27 +57,32 @@ class ProductDetail extends Component {
           </div>
 
           <div className="detail">
-            <div className="elements-top">              
-                  <label>Type product</label>
-                  <span>Client work</span>                                
+            <div className="elements-top">
+              <label>Type product</label>
+              <span>Client work</span>
             </div>
             <div className="elements">
-                <div className="element">
-                  <label>Segments</label>
-                  <ul className="unstyle_list">
-                    <li><span>Frondend development</span></li>
-                    <li>Backend development</li>
-                  </ul>
-                </div>
-                <div className="stack">
-                  <label>Stack</label>
-                  <ul className="unstyle_list">
-                   { 
-                     this.state.details.stack.map(item => (<li>{ item }</li>))
-                   }
-                  </ul>
-                  
-                </div>
+              <div className="element">
+                <label>Segments</label>
+                <ul className="unstyle_list">
+                  <li>
+                    <span>Frondend development</span>
+                  </li>
+                  <li>
+                    <span>Backend development</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="stack">
+                <label>Stack</label>
+                <ul className="unstyle_list_inherent">
+                  {this.state.details.stack.map((item, index) => (
+                    <li key={index}>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>

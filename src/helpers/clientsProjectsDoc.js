@@ -25,7 +25,7 @@ export default {
         ' budgetary information through catalogs of items, assets, sell,' +
         ' maintenance, associated with accounting accounts by department,' +
         ' as result a better quality and integration of the data.\n',
-      stack: ['.NET', 'Vue.js', 'SQL, Azure'],
+      stack: ['.NET', 'Vue.js', 'SQL,', 'Azure'],
       images: [
         'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/dashBoard_2.png',
         'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/Presupuesto.png',
@@ -37,7 +37,7 @@ export default {
     asistencia: {
       name: 'Attendance module - WTV',
       useCase: '',
-      stack: 'Node.js, React.js, Express.js, Azure',
+      stack: ['Node.js', 'React.js', 'Express.js', 'Azure'],
       images: ['', '', ''],
       logo:
         'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1533617562/portfolio/wtv/wtv_logo.png'
@@ -74,7 +74,7 @@ export default {
         ' consultado a través de gráficas y reportes.\n El tiempo estimado' +
         ' de duración del proceso de formulación presupuestaria a través' +
         ' del Sistema de Planificación Presupuestaria se estima en menos de 15 días:',
-      stack: '.NET, Vue.js, SQL, Azure',
+      stack: ['.NET', 'Vue.js', 'SQL', 'Azure'],
       images: [
         'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/dashBoard_2.png',
         'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/Presupuesto.png',
@@ -91,7 +91,7 @@ export default {
         'un listado de participacion y el resumen de duracion de horas de los participantes, ' +
         'en un formato tabular.\n El registro de la asistencia tiene que ser fluido y rapido para ' +
         ' crear un cuello de botella en la puerta de entrada del evento',
-      stack: 'Node.js, React.js, Express.js, Azure',
+      stack: ['Node.js', 'React.js', 'Express.js', 'Azure'],
       images: ['', '', ''],
       logo:
         'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1533617562/portfolio/wtv/wtv_logo.png'
