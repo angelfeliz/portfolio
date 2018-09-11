@@ -25,7 +25,7 @@ export default {
         ' budgetary information through catalogs of items, assets, sell,' +
         ' maintenance, associated with accounting accounts by department,' +
         ' as result a better quality and integration of the data.\n',
-      stack: ['.NET', 'Vue.js', 'SQL,', 'Azure'],
+      stack: ['.NET', 'Vue.js', 'SQL', 'Azure'],
       images: [
         'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/dashBoard_2.png',
         'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1532549992/portfolio/presupuesto/Presupuesto.png',
