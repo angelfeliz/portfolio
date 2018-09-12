@@ -5,6 +5,9 @@ const Contact = () => {
   return (
     <section className="contact">
       <div className="contact-flex-row">
+        <div className="not-show">
+          <img className="me shadowing" src={require('../../images/me.jpg')} />
+        </div>
         <div className="container_image_footer">
           <p>Thank you for checking out my portfolio.</p>
         </div>

@@ -74,7 +74,7 @@ class Products extends Component {
     let repoDependOnTabActive = {
       tab1: this.state.gitHub_repositories_own.map((item, index) => {
         return (
-          <div className="detail_box_product shadowing">
+          <div className="detail_box_product shadowing" key={index}>
             <ProductShowcase
               key={index}
               index={index}
@@ -89,11 +89,12 @@ class Products extends Component {
       tab2: this.state.clients_proyects.map((item, index) => {
         return (
           <Link
+            key={index}
             className="detail_box_product shadowing text-none-decoration"
             to={{
               pathname: '/product',
               state: {
-                name: clientsProject[this.props.language][item]['name'],
+                language: this.props.language,
                 code: item
               }
             }}

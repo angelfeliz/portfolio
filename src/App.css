@@ -1,7 +1,7 @@
 
 .bar_nav {
-   background-color: rgba(49, 61, 84, 1);
-   position: relative;   
+   background-color: rgb(217,83,79);
+   position: relative;
    display:flex;
    flex-direction: row;
    height: auto;
@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 1%;
+  margin-left: 2%;
 }
 
 .one-left_botton  span {

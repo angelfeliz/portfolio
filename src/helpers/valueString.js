@@ -76,7 +76,7 @@ export const valueString = {
 export function palletColors () {
   const colors = {
     1: '#e9a841', // mostaza
-    2: '#511810', // maron rojiso
+    2: '#D9534F', // maron rojiso pasivo
     3: '#1c534c', // verde suave
     4: '#313d54' // azul oscuro
   }

@@ -7,10 +7,12 @@ import clientsProject from '../../helpers/clientsProjectsDoc'
 class ProductDetail extends Component {
   constructor (props) {
     super(props)
+    let language = this.props.location.state.language
+    let code = this.props.location.state.code
     this.state = {
       readme: '',
       details: {
-        ...clientsProject['en']['presupuesto']
+        ...clientsProject[language][code]
       }
     }
   }
@@ -35,28 +37,28 @@ class ProductDetail extends Component {
     }) */
   }
   render () {
-    console.log('state ', this.state.details)
+    console.log('state ', this.props.location)
     return (
       <div>
         <div className="grid-container">
           <div className="logo">
-            <img src={this.state.details.logo} />
+            <img className="shadowing" src={this.state.details.logo} />
           </div>
-          <div className="use_case">
+          <div className="use_case shadowing">
             <h2>{this.state.details.name}</h2>
             <p>{this.state.details.useCase}</p>
           </div>
           <div className="project_img_1">
-            <img src={this.state.details.images[0]} />
+            <img className="shadowing" src={this.state.details.images[0]} />
           </div>
           <div className="project_img_2">
-            <img src={this.state.details.images[1]} />
+            <img className="shadowing" src={this.state.details.images[1]} />
           </div>
           <div className="project_img_3">
-            <img src={this.state.details.images[2]} />
+            <img className="shadowing" src={this.state.details.images[2]} />
           </div>
 
-          <div className="detail">
+          <div className="detail shadowing">
             <div className="elements-top">
               <label>Type product</label>
               <span>Client work</span>

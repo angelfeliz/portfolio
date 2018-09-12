@@ -76,12 +76,12 @@
 .grid-container img {
     width: 100%;
     height: 100%;
-    box-shadow: 0px 0px 3px 2px rgba(247, 131, 131, 0.2), 0 4px 3px 2px rgba(0, 0, 0, 0.2) ;
 }
 
 .use_case {
     grid-area: use_case;
-    background-color: white;
+    background-color: #f5f6f7;
+    padding: 1.5%;
 }
 .use_case h2 {
     font-weight: 200;
@@ -112,11 +112,11 @@
 
 .detail {
     grid-area: detail;
-    background-color: white;
+    background-color: #f5f6f7;
     padding: 0 1.3% 0 1.3%;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px -1px 3px 2px rgba(0, 0, 0, 0.2), 0 1px 3px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2%;
 }
 
 .detail h4 {
@@ -157,18 +157,16 @@
 
 .logo {
     grid-area: logo;
-    max-width: 100%;    
-    display: inherit;    
+    max-width: 100%;
+    display: inherit;
     align-content: center;
-    margin-bottom: 4%;
-    padding: .9%;
+    margin-bottom: 2%;
 }
 
 .logo img {
   margin: 0 auto;
   height: 100%;
   width: 100%;
-  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2), 0 4px 3px 2px rgba(0, 0, 0, 0.2) ;
 }
 
 .white-box { 
@@ -188,7 +186,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;    
+    justify-content: center;
     height: auto;
 }
 
@@ -282,7 +280,7 @@
             "detail use_case"
             "detail project_img_1"
             "detail project_img_2"
-            "detail project_img_3";    
+            "detail project_img_3";
     }
 
     .grid-container label {
@@ -301,9 +299,9 @@
 
     .detail {
         padding: 5%;
-        box-shadow: -1px -1px 3px 2px rgba(0, 0, 0, 0.2);
-        
+        max-height: 100%;
     }
+
     .detail .elements-top {
         display: flex;
         flex-direction: column;
@@ -330,12 +328,18 @@
         margin-top: 10%;
         margin-right: 0;
         margin-bottom: 10%;
-        
     }
     
     .detail .elements .stack {
         display: flex;
         flex-direction: column;
+    }
+
+    .use_case p {
+        font-size: 1em;
+        font-weight: 100;
+        text-align: justify;
+        line-height: 2em;
     }
   }
 

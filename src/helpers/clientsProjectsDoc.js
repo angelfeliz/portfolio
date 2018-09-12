@@ -36,11 +36,15 @@ export default {
     },
     asistencia: {
       name: 'Attendance module - WTV',
-      useCase: '',
+      useCase: 'Writing use case...',
       stack: ['Node.js', 'React.js', 'Express.js', 'Azure'],
-      images: ['', '', ''],
+      images: [
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1536717923/portfolio/private.png',
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1536717923/portfolio/private.png',
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1536717923/portfolio/private.png'
+      ],
       logo:
-        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1533617562/portfolio/wtv/wtv_logo.png'
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1534706403/wtv/wtvlandscap.png'
     }
   },
   es: {
@@ -92,9 +96,13 @@ export default {
         'en un formato tabular.\n El registro de la asistencia tiene que ser fluido y rapido para ' +
         ' crear un cuello de botella en la puerta de entrada del evento',
       stack: ['Node.js', 'React.js', 'Express.js', 'Azure'],
-      images: ['', '', ''],
+      images: [
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1536717923/portfolio/private.png',
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1536717923/portfolio/private.png',
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1536717923/portfolio/private.png'
+      ],
       logo:
-        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1533617562/portfolio/wtv/wtv_logo.png'
+        'https://res.cloudinary.com/erodriguezfeliz/image/upload/v1534706403/wtv/wtvlandscap.png'
     }
   }
 }

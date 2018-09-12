@@ -10,7 +10,7 @@ class MenuFixedHorizonte extends React.Component {
 
   render () {
     return (
-      <div className={`shadowing-topless  bar_nav ${this.props.fix}`}>
+      <div className={`bar_nav ${this.props.fix}`}>
         <div className="one-left_botton">{this.props.children}</div>
         {this.props.listMenu.length > 0 ? (
           <div className="rigth_section_nav">
