@@ -23,7 +23,9 @@ class BannerWithMessage extends Component {
       backgroundColor: `${this.props.colorRGB}`,
       borderBottom: `4px solid ${this.props.palletColor}`,
       color: 'white',
-      fontWeight: '200'
+      fontWeight: '200',
+      backgroundImage:
+        'linear-gradient(to bottom, rgb(49, 61, 84), rgb(64, 97, 117) )'
     }
     console.log(styles)
     console.log(this.props.palletColor)

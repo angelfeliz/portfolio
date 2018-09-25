@@ -3,7 +3,7 @@
 .bg-image-section-1 {
     /*background-image: url('../images/concrete-texture.png');  */
     /*background-image: url('../../images/sky.jpeg');*/
-    background-color: rgb(217,83,79); /*#cacfd5;/*#d56a5a;*/
+    background-color: white;/*rgb(217,83,79)*/ /*#cacfd5;/*#d56a5a;*/
     height: auto;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -29,7 +29,8 @@
 
   .naming {
     height: 40vh;
-    background-color: rgba(81, 24, 16, .5);
+    background-color:   gb(49, 61, 84);
+    background-image: linear-gradient(to bottom , rgb(49, 61, 84), rgb(64, 97, 117) );
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,22 +59,6 @@
     text-align: center;
   }
   
-  .shortSummary {
-    margin-top: 1.78%;
-    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
-    line-height: 150%;  
-    font-weight: 100;  
-    text-align: justify;
-    padding-right: 5%;
-    padding-left:5%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    background-color: rgb(217,83,79); 
-    
-    
-  }
-
-
 
 @media all and (max-width: 800px) {
   .image_front_picture {
@@ -96,13 +81,7 @@
     grid-template-columns: [first] 100%;
     height: auto;
   }
-  .shortSummary {
-    margin-top: 0;
-    padding-right: 10%;    
-    padding-top:2.5%;
-    background-color: #1c534c;
-    color:white;
-  }
+  
   .bg-image-section-1 {
     height: auto;
   }

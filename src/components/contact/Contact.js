@@ -1,12 +1,13 @@
 import React from 'react'
 import './contact.css'
+import { valueString } from '../../helpers/valueString'
 
-const Contact = () => {
+const Contact = props => {
   return (
     <section className="contact">
       <div className="contact-flex-row">
-        <div className="not-show">
-          <img className="me shadowing" src={require('../../images/me.jpg')} />
+        <div>
+          <p className="shortSummary">{valueString[props.language].about}</p>
         </div>
         <div className="container_image_footer">
           <p>Thank you for checking out my portfolio.</p>
