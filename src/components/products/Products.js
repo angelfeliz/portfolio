@@ -4,8 +4,8 @@ import { getAllRepo, listOfRepoToShow } from '../../helpers/gitHubApi'
 import { palletColors } from '../../helpers/valueString'
 import clientsProject from '../../helpers/clientsProjectsDoc'
 import ProductShowcase from './ProductShowcase'
+import ProductClient from './ProductClient'
 import './productDetail.css'
-import { Link } from 'react-router-dom'
 
 // import beach from '../images/sea-bay-waterfront-beach.jpeg'
 
@@ -72,7 +72,17 @@ class Products extends Component {
 
   render () {
     let repoDependOnTabActive = {
-      tab1: this.state.gitHub_repositories_own.map((item, index) => {
+      tab1: this.state.clients_proyects.map((item, index) => {
+        return (
+          <ProductClient
+            key={index}
+            index={index}
+            name={clientsProject[this.props.language][item]['name']}
+            code={item}
+          />
+        )
+      }),
+      tab2: this.state.gitHub_repositories_own.map((item, index) => {
         return (
           <div className="detail_box_product shadowing" key={index}>
             <ProductShowcase
@@ -84,29 +94,6 @@ class Products extends Component {
               onClickProduct={this.goToGitHubLink}
             />
           </div>
-        )
-      }),
-      tab2: this.state.clients_proyects.map((item, index) => {
-        return (
-          <Link
-            key={index}
-            className="detail_box_product shadowing text-none-decoration"
-            to={{
-              pathname: '/product',
-              state: {
-                language: this.props.language,
-                code: item
-              }
-            }}
-          >
-            <ProductShowcase
-              key={index}
-              index={index}
-              name={clientsProject[this.props.language][item]['name']}
-              code={item}
-              palletColors={palletColors()}
-            />
-          </Link>
         )
       })
     }
@@ -123,7 +110,7 @@ class Products extends Component {
               this.tabSelected({ tab1: true, tab2: false, selected: 'tab1' })
             }
           >
-            GitHub
+            Projects
           </span>
           <span
             className={`tab_botton ${
@@ -133,7 +120,7 @@ class Products extends Component {
               this.tabSelected({ tab1: false, tab2: true, selected: 'tab2' })
             }
           >
-            Projects
+            GitHub
           </span>
           <div className="flex_container-row">
             {repoDependOnTabActive[this.state.tabs.selected]}
